@@ -11,6 +11,10 @@ Edge TTS 是一个基于 Microsoft Edge 文本转语音服务的命令行工具�
 - 可生成字幕文件
 - 简单易用的命令行界面
 
+## 音频试听
+
+您可以在以下地址试听各种声音：[Edge TTS 文本转语音](https://huggingface.co/spaces/innoai/Edge-TTS-Text-to-Speech)
+
 ## 安装
 
 ```bash

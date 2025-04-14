@@ -11,6 +11,10 @@ Edge TTS is a command-line tool based on Microsoft Edge's text-to-speech service
 - Generate subtitle files
 - Simple and easy-to-use command-line interface
 
+## Audio Preview
+
+You can preview the voices at: [Edge TTS Text to Speech](https://huggingface.co/spaces/innoai/Edge-TTS-Text-to-Speech)
+
 ## Installation
 
 ```bash
