@@ -35,7 +35,7 @@ var (
 		"Sec-CH-UA-Model": "",
 	}
 
-	// 基本的 WebSocket 头部
+	// Basic WebSocket headers
 	WSSHeaders = map[string]string{
 		"Pragma":          "no-cache",
 		"Cache-Control":   "no-cache",
@@ -43,7 +43,7 @@ var (
 		"Accept-Language": "en-US,en;q=0.9",
 	}
 
-	// WebSocket 专用头部
+	// WebSocket specific headers
 	WSProtocolHeaders = map[string]string{
 		// "Upgrade": "websocket",
 		// "Connection": "Upgrade",
@@ -61,21 +61,21 @@ var (
 )
 
 func init() {
-	// 将 BaseHeaders 添加到 WSSHeaders，但排除 WebSocket 专用头部
+	// Add BaseHeaders to WSSHeaders, excluding WebSocket specific headers
 	for k, v := range BaseHeaders {
-		// 跳过 WebSocket 专用头部
+		// Skip WebSocket specific headers
 		if k == "Upgrade" || k == "Connection" || strings.HasPrefix(k, "Sec-WebSocket") {
 			continue
 		}
 		WSSHeaders[k] = v
 	}
 
-	// 添加 WebSocket 专用头部
+	// Add WebSocket specific headers
 	for k, v := range WSProtocolHeaders {
 		WSSHeaders[k] = v
 	}
 
-	// 将 BaseHeaders 添加到 VoiceHeaders
+	// Add BaseHeaders to VoiceHeaders
 	for k, v := range BaseHeaders {
 		VoiceHeaders[k] = v
 	}

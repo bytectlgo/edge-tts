@@ -2,7 +2,7 @@ package edge_tts
 
 import "errors"
 
-// 错误类型定义
+// Error type definitions
 var (
 	ErrUnknownResponse    = errors.New("unknown response from server")
 	ErrUnexpectedResponse = errors.New("unexpected response from server")
@@ -10,7 +10,7 @@ var (
 	ErrWebSocketError     = errors.New("websocket error")
 )
 
-// TTSConfig 定义了文本转语音的配置
+// TTSConfig defines the text-to-speech configuration
 type TTSConfig struct {
 	Voice  string
 	Rate   string
@@ -19,17 +19,17 @@ type TTSConfig struct {
 	Text   string
 }
 
-// TTSChunk 表示一个音频数据块或元数据
+// TTSChunk represents an audio data chunk or metadata
 type TTSChunk struct {
-	Type     string                 // "audio" 或 "WordBoundary"
-	Data     []byte                 // 音频数据
-	Offset   float64                // 仅用于 WordBoundary
-	Duration float64                // 仅用于 WordBoundary
-	Text     string                 // 仅用于 WordBoundary
-	Metadata map[string]interface{} // 其他元数据
+	Type     string                 // "audio" or "WordBoundary"
+	Data     []byte                 // Audio data
+	Offset   float64                // Only used for WordBoundary
+	Duration float64                // Only used for WordBoundary
+	Text     string                 // Only used for WordBoundary
+	Metadata map[string]interface{} // Other metadata
 }
 
-// CommunicateState 表示通信状态
+// CommunicateState represents the communication state
 type CommunicateState struct {
 	PartialText        []byte
 	OffsetCompensation int64
@@ -40,13 +40,13 @@ type CommunicateState struct {
 	SSML               string
 }
 
-// VoiceTag 定义了语音标签
+// VoiceTag defines the voice tag
 type VoiceTag struct {
 	ContentCategories  []string `json:"ContentCategories"`
 	VoicePersonalities []string `json:"VoicePersonalities"`
 }
 
-// Voice 表示一个语音
+// Voice represents a voice
 type Voice struct {
 	Name       string   `json:"Name"`
 	ShortName  string   `json:"ShortName"`
@@ -58,7 +58,7 @@ type Voice struct {
 	VoiceTag   VoiceTag `json:"VoiceTag"`
 }
 
-// NewTTSConfig 创建一个新的 TTSConfig
+// NewTTSConfig creates a new TTSConfig
 func NewTTSConfig(text, voice string) *TTSConfig {
 	return &TTSConfig{
 		Voice:  voice,
@@ -69,8 +69,8 @@ func NewTTSConfig(text, voice string) *TTSConfig {
 	}
 }
 
-// Validate 验证 TTSConfig 的参数
+// Validate validates the TTSConfig parameters
 func (c *TTSConfig) Validate() error {
-	// TODO: 实现参数验证
+	// TODO: Implement parameter validation
 	return nil
 }

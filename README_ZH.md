@@ -66,23 +66,56 @@ edge-tts -text "你好，世界！" -voice "zh-CN-XiaoxiaoNeural" -write-media h
 package main
 
 import (
-    "github.com/bytectlgo/edge-tts"
+    "context"
+    "fmt"
+    "time"
+    "github.com/bytectlgo/edge-tts/pkg/edge_tts"
 )
 
 func main() {
-    // 创建新的 TTS 客户端
-    client := edge.NewTTS()
+    // 创建新的 TTS 客户端，设置文本和语音
+    comm := edge_tts.NewCommunicate(
+        "你好，世界！",
+        "zh-CN-XiaoxiaoNeural",
+        edge_tts.WithRate("+0%"),
+        edge_tts.WithVolume("+0%"),
+        edge_tts.WithPitch("+0Hz"),
+    )
+
+    // 创建带超时的上下文
+    ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+    defer cancel()
 
     // 生成音频文件
-    err := client.TextToSpeech("你好，世界！", "zh-CN-XiaoxiaoNeural", "output.mp3")
+    err := comm.Save(ctx, "output.mp3", "")
     if err != nil {
         panic(err)
     }
 
     // 生成带字幕的音频文件
-    err = client.TextToSpeechWithSubtitles("你好，世界！", "zh-CN-XiaoxiaoNeural", "output.mp3", "output.srt")
+    err = comm.Save(ctx, "output.mp3", "output.srt")
     if err != nil {
         panic(err)
+    }
+
+    // 流式处理音频数据
+    ch, err := comm.Stream(ctx)
+    if err != nil {
+        panic(err)
+    }
+
+    for chunk := range ch {
+        switch chunk.Type {
+        case "audio":
+            // 处理音频数据
+            fmt.Printf("收到音频数据块，大小：%d\n", len(chunk.Data))
+        case "WordBoundary":
+            // 处理字幕元数据
+            fmt.Printf("单词：%s，偏移：%f，持续时间：%f\n", 
+                chunk.Text, chunk.Offset, chunk.Duration)
+        case "error":
+            fmt.Printf("错误：%s\n", string(chunk.Data))
+        }
     }
 }
 

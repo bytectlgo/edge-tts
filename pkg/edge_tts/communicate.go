@@ -17,7 +17,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-// Communicate 是与 Edge TTS 服务通信的主要结构
+// Communicate is the main structure for communicating with Edge TTS service
 type Communicate struct {
 	config *TTSConfig
 	client *http.Client
@@ -26,9 +26,9 @@ type Communicate struct {
 	state  *CommunicateState
 }
 
-// NewCommunicate 创建一个新的 Communicate 实例
+// NewCommunicate creates a new Communicate instance
 func NewCommunicate(text, voice string, opts ...Option) *Communicate {
-	// 获取系统代理
+	// Get system proxy
 	proxy := os.Getenv("HTTP_PROXY")
 	if proxy == "" {
 		proxy = os.Getenv("HTTPS_PROXY")
@@ -36,12 +36,12 @@ func NewCommunicate(text, voice string, opts ...Option) *Communicate {
 
 	config := NewTTSConfig(text, voice)
 
-	// 应用选项
+	// Apply options
 	for _, opt := range opts {
 		opt(config)
 	}
 
-	// 验证配置
+	// Validate configuration
 	if err := config.Validate(); err != nil {
 		panic(err)
 	}
@@ -57,38 +57,38 @@ func NewCommunicate(text, voice string, opts ...Option) *Communicate {
 	}
 }
 
-// Option 定义配置选项
+// Option defines configuration options
 type Option func(*TTSConfig)
 
-// WithRate 设置语速
+// WithRate sets the speech rate
 func WithRate(rate string) Option {
 	return func(c *TTSConfig) {
 		c.Rate = rate
 	}
 }
 
-// WithVolume 设置音量
+// WithVolume sets the volume
 func WithVolume(volume string) Option {
 	return func(c *TTSConfig) {
 		c.Volume = volume
 	}
 }
 
-// WithPitch 设置音调
+// WithPitch sets the pitch
 func WithPitch(pitch string) Option {
 	return func(c *TTSConfig) {
 		c.Pitch = pitch
 	}
 }
 
-// Stream 方法实现
+// Stream method implementation
 func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 	ch := make(chan TTSChunk, 100)
 
 	go func() {
 		defer close(ch)
 
-		// 创建 WebSocket dialer
+		// Create WebSocket dialer
 		dialer := websocket.Dialer{
 			HandshakeTimeout: 10 * time.Second,
 			TLSClientConfig: &tls.Config{
@@ -111,28 +111,28 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 			EnableCompression: true,
 		}
 
-		// 生成连接 ID 和安全令牌
+		// Generate connection ID and security token
 		connID := uuid.New().String()
 		secMsGec := generateSecMsGec()
 
-		// 构建完整的 WebSocket URL
+		// Build complete WebSocket URL
 		wsURL := fmt.Sprintf("%s&Sec-MS-GEC=%s&Sec-MS-GEC-Version=%s&ConnectionId=%s",
 			c.wsURL, secMsGec, SEC_MS_GEC_VERSION, connID)
 
-		// 准备请求头
+		// Prepare request headers
 		headers := http.Header{}
 		for k, v := range WSSHeaders {
 			headers.Set(k, v)
 		}
 
-		// 建立 WebSocket 连接
+		// Establish WebSocket connection
 		conn, _, err := dialer.Dial(wsURL, headers)
 		if err != nil {
 			ch <- TTSChunk{Type: "error", Data: []byte(err.Error())}
 			return
 		}
 
-		// 发送命令请求
+		// Send command request
 		cmdReq := fmt.Sprintf("X-Timestamp:%s\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n{\"context\":{\"synthesis\":{\"audio\":{\"metadataoptions\":{\"sentenceBoundaryEnabled\":\"false\",\"wordBoundaryEnabled\":\"true\"},\"outputFormat\":\"audio-24khz-48kbitrate-mono-mp3\"}}}}\r\n",
 			time.Now().UTC().Format(time.RFC1123))
 
@@ -141,7 +141,7 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 			return
 		}
 
-		// 发送 SSML 请求
+		// Send SSML request
 		ssmlReq := fmt.Sprintf("X-RequestId:%s\r\nContent-Type:application/ssml+xml\r\nX-Timestamp:%s\r\nPath:ssml\r\n\r\n%s",
 			uuid.New().String(),
 			time.Now().UTC().Format(time.RFC3339),
@@ -152,17 +152,17 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 			return
 		}
 
-		// 处理响应数据
+		// Process response data
 		for {
 			select {
 			case <-ctx.Done():
-				// 上下文取消时，优雅关闭连接
+				// Gracefully close connection when context is canceled
 				conn.WriteControl(websocket.CloseMessage,
 					websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""),
 					time.Now().Add(time.Second))
 				return
 			default:
-				// 设置读取超时
+				// Set read timeout
 				conn.SetReadDeadline(time.Now().Add(30 * time.Second))
 				messageType, message, err := conn.ReadMessage()
 				if err != nil {
@@ -170,45 +170,45 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 						return
 					}
 					if netErr, ok := err.(net.Error); ok && netErr.Timeout() {
-						// 超时错误，继续等待
+						// Timeout error, continue waiting
 						continue
 					}
 					if strings.Contains(err.Error(), "broken pipe") {
-						// 忽略 broken pipe 错误
+						// Ignore broken pipe error
 						return
 					}
 					ch <- TTSChunk{Type: "error", Data: []byte(err.Error())}
 					return
 				}
 
-				// 处理二进制消息（音频数据）
+				// Process binary message (audio data)
 				if messageType == websocket.BinaryMessage {
-					// 消息太短，无法包含头部长度
+					// Message too short to contain header length
 					if len(message) < 2 {
 						ch <- TTSChunk{Type: "error", Data: []byte("binary message is too short")}
 						return
 					}
 
-					// 前两个字节是头部长度
+					// First two bytes are header length
 					headerLength := int(binary.BigEndian.Uint16(message[:2]))
 					if headerLength > len(message) {
 						ch <- TTSChunk{Type: "error", Data: []byte("header length is greater than message length")}
 						return
 					}
 
-					// 解析头部和数据
+					// Parse headers and data
 					headers, data := getHeadersAndData(message, headerLength)
 
-					// 检查路径
+					// Check path
 					if path, ok := headers["Path"]; !ok || path != "audio" {
 						ch <- TTSChunk{Type: "error", Data: []byte("received binary message, but the path is not audio")}
 						return
 					}
 
-					// 检查Content-Type
+					// Check Content-Type
 					contentType, ok := headers["Content-Type"]
 					if !ok {
-						// 如果没有Content-Type，数据必须为空
+						// If no Content-Type, data must be empty
 						if len(data) > 0 {
 							// ch <- TTSChunk{Type: "error", Data: []byte("received binary message with no Content-Type, but with data")}
 							continue
@@ -216,19 +216,19 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 						continue
 					}
 
-					// 检查Content-Type是否为audio/mpeg
+					// Check if Content-Type is audio/mpeg
 					if contentType != "audio/mpeg" {
 						ch <- TTSChunk{Type: "error", Data: []byte("received binary message with unexpected Content-Type: " + contentType)}
 						continue
 					}
 
-					// 如果数据为空，跳过
+					// Skip if data is empty
 					if len(data) == 0 {
 						ch <- TTSChunk{Type: "error", Data: []byte("received binary message, but it is missing the audio data")}
 						continue
 					}
 
-					// 发送音频数据
+					// Send audio data
 					ch <- TTSChunk{
 						Type: "audio",
 						Data: data,
@@ -236,9 +236,9 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 					continue
 				}
 
-				// 处理文本消息（元数据）
+				// Process text message (metadata)
 				if messageType == websocket.TextMessage {
-					// 解析消息头和数据
+					// Parse message headers and data
 					parts := bytes.Split(message, []byte("\r\n\r\n"))
 					if len(parts) != 2 {
 						continue
@@ -247,20 +247,20 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 					headers := string(parts[0])
 					data := parts[1]
 
-					// 检查是否是结束消息
+					// Check if it's an end message
 					if strings.Contains(headers, "Path:turn.end") {
 						ch <- TTSChunk{
 							Type: "end",
 							Data: nil,
 						}
-						// 收到结束消息后，直接关闭连接
+						// Close connection after receiving end message
 						conn.Close()
 						return
 					}
 
-					// 检查是否是元数据消息
+					// Check if it's a metadata message
 					if strings.Contains(headers, "Path:audio.metadata") {
-						// 解析元数据
+						// Parse metadata
 						var metadata struct {
 							Metadata []struct {
 								Type string `json:"Type"`
@@ -277,7 +277,7 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 							return
 						}
 
-						// 处理每个元数据项
+						// Process each metadata item
 						for _, meta := range metadata.Metadata {
 							if meta.Type == "WordBoundary" {
 								ch <- TTSChunk{
@@ -297,21 +297,21 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 	return ch, nil
 }
 
-// Save 方法实现
+// Save method implementation
 func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath string) error {
 	ch, err := c.Stream(ctx)
 	if err != nil {
 		return err
 	}
 
-	// 创建音频文件
+	// Create audio file
 	audioFile, err := os.Create(audioPath)
 	if err != nil {
 		return err
 	}
 	defer audioFile.Close()
 
-	// 创建字幕文件（如果指定）
+	// Create subtitle file (if specified)
 	var subtitleFile *os.File
 	if subtitlePath != "" {
 		subtitleFile, err = os.Create(subtitlePath)
@@ -321,7 +321,7 @@ func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath s
 		defer subtitleFile.Close()
 	}
 
-	// 创建字幕生成器
+	// Create subtitle generator
 	submaker := NewSubMaker()
 
 	audioReceived := false
@@ -332,7 +332,7 @@ func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath s
 		}
 		if chunk.Type == "audio" {
 			audioReceived = true
-			// 将音频数据写入缓冲区
+			// Write audio data to buffer
 			if _, err := audioFile.Write(chunk.Data); err != nil {
 				return err
 			}
@@ -341,12 +341,12 @@ func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath s
 		}
 	}
 
-	// 检查是否收到音频数据
+	// Check if audio data was received
 	if !audioReceived {
 		return ErrNoAudioReceived
 	}
 
-	// 生成字幕文件
+	// Generate subtitle file
 	if subtitleFile != nil {
 		if _, err := subtitleFile.WriteString(submaker.GetSRT()); err != nil {
 			return err
@@ -356,7 +356,7 @@ func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath s
 	return nil
 }
 
-// createSSML 创建SSML字符串
+// createSSML creates SSML string
 func (c *Communicate) createSSML() string {
 	return fmt.Sprintf(
 		"<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"+
@@ -374,24 +374,24 @@ func (c *Communicate) createSSML() string {
 	)
 }
 
-// getHeadersAndData 从二进制消息中提取头部和数据
+// getHeadersAndData extracts headers and data from binary message
 func getHeadersAndData(data []byte, headerLength int) (map[string]string, []byte) {
 	headers := make(map[string]string)
 
-	// 如果数据长度小于2字节，返回空结果
+	// If data length is less than 2 bytes, return empty result
 	if len(data) < 2 {
 		return headers, nil
 	}
 
-	// 如果头部长度小于等于2，说明没有头部数据
+	// If header length is less than or equal to 2, no header data
 	if headerLength <= 2 {
 		return headers, data[2:]
 	}
 
-	// 解析头部数据（从第3个字节开始，到headerLength结束）
+	// Parse header data (from 3rd byte to headerLength)
 	headerData := data[2:headerLength]
 
-	// 解析头部
+	// Parse headers
 	lines := bytes.Split(headerData, []byte("\r\n"))
 	for _, line := range lines {
 		if len(line) == 0 {
@@ -405,10 +405,10 @@ func getHeadersAndData(data []byte, headerLength int) (map[string]string, []byte
 		}
 	}
 
-	// 提取内容数据（从headerLength开始到结束）
+	// Extract content data (from headerLength to end)
 	var content []byte
 	if len(data) > headerLength {
-		// 跳过可能的额外换行符
+		// Skip possible extra newlines
 		start := headerLength
 		for start < len(data) && (data[start] == '\r' || data[start] == '\n') {
 			start++

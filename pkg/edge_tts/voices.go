@@ -12,22 +12,22 @@ import (
 	"strings"
 )
 
-// ListVoices 获取所有可用的语音列表
+// ListVoices gets all available voices
 func ListVoices(ctx context.Context) ([]Voice, error) {
-	// 获取系统代理
+	// Get system proxy
 	proxy := os.Getenv("HTTP_PROXY")
 	if proxy == "" {
 		proxy = os.Getenv("HTTPS_PROXY")
 	}
 
-	// 创建HTTP客户端
+	// Create HTTP client
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
 		},
 	}
 
-	// 如果有代理，设置代理
+	// If proxy exists, set it
 	if proxy != "" {
 		proxyURL, err := url.Parse(proxy)
 		if err != nil {
@@ -40,57 +40,57 @@ func ListVoices(ctx context.Context) ([]Voice, error) {
 		Transport: transport,
 	}
 
-	// 生成安全令牌
+	// Generate security token
 	secMsGec := generateSecMsGec()
 
-	// 构建请求URL
+	// Build request URL
 	reqURL := fmt.Sprintf("%s&Sec-MS-GEC=%s&Sec-MS-GEC-Version=%s",
 		VoiceList, secMsGec, SEC_MS_GEC_VERSION)
 
-	// 创建请求
+	// Create request
 	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("create request failed: %w", err)
 	}
 
-	// 设置请求头
+	// Set request headers
 	for k, v := range BaseHeaders {
 		req.Header.Set(k, v)
 	}
 
-	// 发送请求
+	// Send request
 	resp, err := client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
 
-	// 检查响应状态码
+	// Check response status code
 	if resp.StatusCode != http.StatusOK {
-		// 如果是403错误，可能需要调整时钟偏差
+		// If 403 error, may need to adjust clock skew
 		if resp.StatusCode == http.StatusForbidden {
 			if err := handleClientResponseError(resp); err != nil {
 				return nil, err
 			}
-			// 重试请求
+			// Retry request
 			return ListVoices(ctx)
 		}
 		return nil, fmt.Errorf("request failed with status: %d", resp.StatusCode)
 	}
 
-	// 读取响应内容
+	// Read response content
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, fmt.Errorf("read response body failed: %w", err)
 	}
 
-	// 解析响应
+	// Parse response
 	var voices []Voice
 	if err := json.Unmarshal(body, &voices); err != nil {
 		return nil, fmt.Errorf("parse response failed: %w", err)
 	}
 
-	// 清理语音标签中的空白字符
+	// Clean whitespace in voice tags
 	for i := range voices {
 		for j := range voices[i].VoiceTag.ContentCategories {
 			voices[i].VoiceTag.ContentCategories[j] = strings.TrimSpace(voices[i].VoiceTag.ContentCategories[j])
@@ -103,15 +103,15 @@ func ListVoices(ctx context.Context) ([]Voice, error) {
 	return voices, nil
 }
 
-// ListVoicesWithProxy 使用代理获取所有可用的语音列表
+// ListVoicesWithProxy gets all available voices using a proxy
 func ListVoicesWithProxy(ctx context.Context, proxyURL string) ([]Voice, error) {
-	// 解析代理URL
+	// Parse proxy URL
 	proxy, err := url.Parse(proxyURL)
 	if err != nil {
 		return nil, fmt.Errorf("parse proxy URL failed: %w", err)
 	}
 
-	// 创建HTTP客户端
+	// Create HTTP client
 	client := &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
@@ -121,57 +121,57 @@ func ListVoicesWithProxy(ctx context.Context, proxyURL string) ([]Voice, error) 
 		},
 	}
 
-	// 生成安全令牌
+	// Generate security token
 	secMsGec := generateSecMsGec()
 
-	// 构建请求URL
+	// Build request URL
 	reqURL := fmt.Sprintf("%s&Sec-MS-GEC=%s&Sec-MS-GEC-Version=%s",
 		VoiceList, secMsGec, SEC_MS_GEC_VERSION)
 
-	// 创建请求
+	// Create request
 	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("create request failed: %w", err)
 	}
 
-	// 设置请求头
+	// Set request headers
 	for k, v := range BaseHeaders {
 		req.Header.Set(k, v)
 	}
 
-	// 发送请求
+	// Send request
 	resp, err := client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
 
-	// 检查响应状态码
+	// Check response status code
 	if resp.StatusCode != http.StatusOK {
-		// 如果是403错误，可能需要调整时钟偏差
+		// If 403 error, may need to adjust clock skew
 		if resp.StatusCode == http.StatusForbidden {
 			if err := handleClientResponseError(resp); err != nil {
 				return nil, err
 			}
-			// 重试请求
+			// Retry request
 			return ListVoicesWithProxy(ctx, proxyURL)
 		}
 		return nil, fmt.Errorf("request failed with status: %d", resp.StatusCode)
 	}
 
-	// 读取响应内容
+	// Read response content
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, fmt.Errorf("read response body failed: %w", err)
 	}
 
-	// 解析响应
+	// Parse response
 	var voices []Voice
 	if err := json.Unmarshal(body, &voices); err != nil {
 		return nil, fmt.Errorf("parse response failed: %w", err)
 	}
 
-	// 清理语音标签中的空白字符
+	// Clean whitespace in voice tags
 	for i := range voices {
 		for j := range voices[i].VoiceTag.ContentCategories {
 			voices[i].VoiceTag.ContentCategories[j] = strings.TrimSpace(voices[i].VoiceTag.ContentCategories[j])
