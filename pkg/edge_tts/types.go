@@ -40,6 +40,23 @@ type CommunicateState struct {
 	SSML               string
 }
 
+// VoiceTag 定义了语音标签
+type VoiceTag struct {
+	ContentCategories  []string `json:"ContentCategories"`
+	VoicePersonalities []string `json:"VoicePersonalities"`
+}
+
+// Voice 定义了一个语音
+type Voice struct {
+	ShortName  string   `json:"ShortName"`
+	Gender     string   `json:"Gender"`
+	VoiceTag   VoiceTag `json:"VoiceTag"`
+	Locale     string   `json:"Locale"`
+	LocalName  string   `json:"LocalName"`
+	StyleList  []string `json:"StyleList"`
+	SampleRate int      `json:"SampleRate"`
+}
+
 // NewTTSConfig 创建一个新的 TTSConfig
 func NewTTSConfig(text, voice string) *TTSConfig {
 	return &TTSConfig{
