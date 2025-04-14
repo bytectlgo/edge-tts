@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/bytectlgo/edge-tts/pkg/edge_tts"
@@ -50,28 +51,31 @@ func listVoices() error {
 		return fmt.Errorf("解析响应失败: %v", err)
 	}
 
+	// 打印表头
+	fmt.Printf("%-35s %-9s %-22s %-35s\n", "Name", "Gender", "ContentCategories", "VoicePersonalities")
+	fmt.Println(strings.Repeat("-", 100))
+
 	// 打印语音列表
-	fmt.Printf("找到 %d 个语音:\n", len(voices))
 	for _, voice := range voices {
-		fmt.Printf("名称: %s\n", voice.ShortName)
-		fmt.Printf("性别: %s\n", voice.Gender)
-		fmt.Printf("语言: %s\n", voice.Locale)
-		fmt.Printf("本地名称: %s\n", voice.LocalName)
-		fmt.Printf("采样率: %d\n", voice.SampleRate)
-		if len(voice.StyleList) > 0 {
-			fmt.Printf("样式: %v\n", voice.StyleList)
+		personalities := strings.Join(voice.StyleList, ", ")
+		if personalities == "" {
+			personalities = "Friendly, Positive"
 		}
-		fmt.Println("---")
+		fmt.Printf("%-35s %-9s %-22s %-35s\n",
+			voice.ShortName,
+			voice.Gender,
+			"General",
+			personalities)
 	}
 	return nil
 }
 
-func textToSpeech(text, voice, outputFile string) error {
+func textToSpeech(text, voice, outputFile, subtitleFile string, rate, volume, pitch string) error {
 	// 创建新的 TTS 配置
 	opts := []edge_tts.Option{
-		edge_tts.WithRate("+0%"),
-		edge_tts.WithVolume("+0%"),
-		edge_tts.WithPitch("+0Hz"),
+		edge_tts.WithRate(rate),
+		edge_tts.WithVolume(volume),
+		edge_tts.WithPitch(pitch),
 	}
 
 	// 创建新的 Communicate 实例
@@ -82,37 +86,61 @@ func textToSpeech(text, voice, outputFile string) error {
 	defer cancel()
 
 	// 保存音频到文件
-	err := comm.Save(ctx, outputFile, "")
+	err := comm.Save(ctx, outputFile, subtitleFile)
 	if err != nil {
 		return fmt.Errorf("保存音频失败: %v", err)
 	}
 
-	fmt.Printf("音频已保存到 %s\n", outputFile)
+	if outputFile != "" {
+		fmt.Printf("音频已保存到 %s\n", outputFile)
+	}
+	if subtitleFile != "" {
+		fmt.Printf("字幕已保存到 %s\n", subtitleFile)
+	}
 	return nil
 }
 
 func main() {
 	// 定义命令行参数
-	listFlag := flag.Bool("list", false, "列出所有可用的语音")
-	text := flag.String("text", "你好，世界！", "要转换的文本")
+	listVoicesFlag := flag.Bool("list-voices", false, "列出所有可用的语音")
+	text := flag.String("text", "", "要转换的文本")
 	voice := flag.String("voice", "zh-CN-XiaoxiaoNeural", "要使用的语音")
-	output := flag.String("output", "output.mp3", "输出文件名")
+	outputMedia := flag.String("write-media", "", "输出音频文件名")
+	outputSubtitles := flag.String("write-subtitles", "", "输出字幕文件名")
+	rate := flag.String("rate", "+0%", "语速调整")
+	volume := flag.String("volume", "+0%", "音量调整")
+	pitch := flag.String("pitch", "+0Hz", "音调调整")
 	flag.Parse()
 
 	// 根据参数执行相应的功能
-	if *listFlag {
+	if *listVoicesFlag {
 		if err := listVoices(); err != nil {
 			log.Fatal(err)
 		}
 		return
 	}
 
-	// 检查输出文件是否已存在
-	if _, err := os.Stat(*output); err == nil {
-		fmt.Printf("警告: 文件 %s 已存在，将被覆盖\n", *output)
+	// 检查必要参数
+	if *text == "" {
+		log.Fatal("错误: 必须提供 --text 参数")
+	}
+	if *outputMedia == "" && *outputSubtitles == "" {
+		log.Fatal("错误: 必须提供 --write-media 或 --write-subtitles 参数")
 	}
 
-	if err := textToSpeech(*text, *voice, *output); err != nil {
+	// 检查输出文件是否已存在
+	if *outputMedia != "" {
+		if _, err := os.Stat(*outputMedia); err == nil {
+			fmt.Printf("警告: 文件 %s 已存在，将被覆盖\n", *outputMedia)
+		}
+	}
+	if *outputSubtitles != "" {
+		if _, err := os.Stat(*outputSubtitles); err == nil {
+			fmt.Printf("警告: 文件 %s 已存在，将被覆盖\n", *outputSubtitles)
+		}
+	}
+
+	if err := textToSpeech(*text, *voice, *outputMedia, *outputSubtitles, *rate, *volume, *pitch); err != nil {
 		log.Fatal(err)
 	}
 }

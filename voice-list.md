@@ -1,1933 +1,324 @@
-找到 322 个语音:
-名称: af-ZA-AdriNeural
-性别: Female
-语言: af-ZA
-本地名称: 
-采样率: 0
----
-名称: af-ZA-WillemNeural
-性别: Male
-语言: af-ZA
-本地名称: 
-采样率: 0
----
-名称: sq-AL-AnilaNeural
-性别: Female
-语言: sq-AL
-本地名称: 
-采样率: 0
----
-名称: sq-AL-IlirNeural
-性别: Male
-语言: sq-AL
-本地名称: 
-采样率: 0
----
-名称: am-ET-AmehaNeural
-性别: Male
-语言: am-ET
-本地名称: 
-采样率: 0
----
-名称: am-ET-MekdesNeural
-性别: Female
-语言: am-ET
-本地名称: 
-采样率: 0
----
-名称: ar-DZ-AminaNeural
-性别: Female
-语言: ar-DZ
-本地名称: 
-采样率: 0
----
-名称: ar-DZ-IsmaelNeural
-性别: Male
-语言: ar-DZ
-本地名称: 
-采样率: 0
----
-名称: ar-BH-AliNeural
-性别: Male
-语言: ar-BH
-本地名称: 
-采样率: 0
----
-名称: ar-BH-LailaNeural
-性别: Female
-语言: ar-BH
-本地名称: 
-采样率: 0
----
-名称: ar-EG-SalmaNeural
-性别: Female
-语言: ar-EG
-本地名称: 
-采样率: 0
----
-名称: ar-EG-ShakirNeural
-性别: Male
-语言: ar-EG
-本地名称: 
-采样率: 0
----
-名称: ar-IQ-BasselNeural
-性别: Male
-语言: ar-IQ
-本地名称: 
-采样率: 0
----
-名称: ar-IQ-RanaNeural
-性别: Female
-语言: ar-IQ
-本地名称: 
-采样率: 0
----
-名称: ar-JO-SanaNeural
-性别: Female
-语言: ar-JO
-本地名称: 
-采样率: 0
----
-名称: ar-JO-TaimNeural
-性别: Male
-语言: ar-JO
-本地名称: 
-采样率: 0
----
-名称: ar-KW-FahedNeural
-性别: Male
-语言: ar-KW
-本地名称: 
-采样率: 0
----
-名称: ar-KW-NouraNeural
-性别: Female
-语言: ar-KW
-本地名称: 
-采样率: 0
----
-名称: ar-LB-LaylaNeural
-性别: Female
-语言: ar-LB
-本地名称: 
-采样率: 0
----
-名称: ar-LB-RamiNeural
-性别: Male
-语言: ar-LB
-本地名称: 
-采样率: 0
----
-名称: ar-LY-ImanNeural
-性别: Female
-语言: ar-LY
-本地名称: 
-采样率: 0
----
-名称: ar-LY-OmarNeural
-性别: Male
-语言: ar-LY
-本地名称: 
-采样率: 0
----
-名称: ar-MA-JamalNeural
-性别: Male
-语言: ar-MA
-本地名称: 
-采样率: 0
----
-名称: ar-MA-MounaNeural
-性别: Female
-语言: ar-MA
-本地名称: 
-采样率: 0
----
-名称: ar-OM-AbdullahNeural
-性别: Male
-语言: ar-OM
-本地名称: 
-采样率: 0
----
-名称: ar-OM-AyshaNeural
-性别: Female
-语言: ar-OM
-本地名称: 
-采样率: 0
----
-名称: ar-QA-AmalNeural
-性别: Female
-语言: ar-QA
-本地名称: 
-采样率: 0
----
-名称: ar-QA-MoazNeural
-性别: Male
-语言: ar-QA
-本地名称: 
-采样率: 0
----
-名称: ar-SA-HamedNeural
-性别: Male
-语言: ar-SA
-本地名称: 
-采样率: 0
----
-名称: ar-SA-ZariyahNeural
-性别: Female
-语言: ar-SA
-本地名称: 
-采样率: 0
----
-名称: ar-SY-AmanyNeural
-性别: Female
-语言: ar-SY
-本地名称: 
-采样率: 0
----
-名称: ar-SY-LaithNeural
-性别: Male
-语言: ar-SY
-本地名称: 
-采样率: 0
----
-名称: ar-TN-HediNeural
-性别: Male
-语言: ar-TN
-本地名称: 
-采样率: 0
----
-名称: ar-TN-ReemNeural
-性别: Female
-语言: ar-TN
-本地名称: 
-采样率: 0
----
-名称: ar-AE-FatimaNeural
-性别: Female
-语言: ar-AE
-本地名称: 
-采样率: 0
----
-名称: ar-AE-HamdanNeural
-性别: Male
-语言: ar-AE
-本地名称: 
-采样率: 0
----
-名称: ar-YE-MaryamNeural
-性别: Female
-语言: ar-YE
-本地名称: 
-采样率: 0
----
-名称: ar-YE-SalehNeural
-性别: Male
-语言: ar-YE
-本地名称: 
-采样率: 0
----
-名称: az-AZ-BabekNeural
-性别: Male
-语言: az-AZ
-本地名称: 
-采样率: 0
----
-名称: az-AZ-BanuNeural
-性别: Female
-语言: az-AZ
-本地名称: 
-采样率: 0
----
-名称: bn-BD-NabanitaNeural
-性别: Female
-语言: bn-BD
-本地名称: 
-采样率: 0
----
-名称: bn-BD-PradeepNeural
-性别: Male
-语言: bn-BD
-本地名称: 
-采样率: 0
----
-名称: bn-IN-BashkarNeural
-性别: Male
-语言: bn-IN
-本地名称: 
-采样率: 0
----
-名称: bn-IN-TanishaaNeural
-性别: Female
-语言: bn-IN
-本地名称: 
-采样率: 0
----
-名称: bs-BA-VesnaNeural
-性别: Female
-语言: bs-BA
-本地名称: 
-采样率: 0
----
-名称: bs-BA-GoranNeural
-性别: Male
-语言: bs-BA
-本地名称: 
-采样率: 0
----
-名称: bg-BG-BorislavNeural
-性别: Male
-语言: bg-BG
-本地名称: 
-采样率: 0
----
-名称: bg-BG-KalinaNeural
-性别: Female
-语言: bg-BG
-本地名称: 
-采样率: 0
----
-名称: my-MM-NilarNeural
-性别: Female
-语言: my-MM
-本地名称: 
-采样率: 0
----
-名称: my-MM-ThihaNeural
-性别: Male
-语言: my-MM
-本地名称: 
-采样率: 0
----
-名称: ca-ES-EnricNeural
-性别: Male
-语言: ca-ES
-本地名称: 
-采样率: 0
----
-名称: ca-ES-JoanaNeural
-性别: Female
-语言: ca-ES
-本地名称: 
-采样率: 0
----
-名称: zh-HK-HiuGaaiNeural
-性别: Female
-语言: zh-HK
-本地名称: 
-采样率: 0
----
-名称: zh-HK-HiuMaanNeural
-性别: Female
-语言: zh-HK
-本地名称: 
-采样率: 0
----
-名称: zh-HK-WanLungNeural
-性别: Male
-语言: zh-HK
-本地名称: 
-采样率: 0
----
-名称: zh-CN-XiaoxiaoNeural
-性别: Female
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-XiaoyiNeural
-性别: Female
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-YunjianNeural
-性别: Male
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-YunxiNeural
-性别: Male
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-YunxiaNeural
-性别: Male
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-YunyangNeural
-性别: Male
-语言: zh-CN
-本地名称: 
-采样率: 0
----
-名称: zh-CN-liaoning-XiaobeiNeural
-性别: Female
-语言: zh-CN-liaoning
-本地名称: 
-采样率: 0
----
-名称: zh-TW-HsiaoChenNeural
-性别: Female
-语言: zh-TW
-本地名称: 
-采样率: 0
----
-名称: zh-TW-YunJheNeural
-性别: Male
-语言: zh-TW
-本地名称: 
-采样率: 0
----
-名称: zh-TW-HsiaoYuNeural
-性别: Female
-语言: zh-TW
-本地名称: 
-采样率: 0
----
-名称: zh-CN-shaanxi-XiaoniNeural
-性别: Female
-语言: zh-CN-shaanxi
-本地名称: 
-采样率: 0
----
-名称: hr-HR-GabrijelaNeural
-性别: Female
-语言: hr-HR
-本地名称: 
-采样率: 0
----
-名称: hr-HR-SreckoNeural
-性别: Male
-语言: hr-HR
-本地名称: 
-采样率: 0
----
-名称: cs-CZ-AntoninNeural
-性别: Male
-语言: cs-CZ
-本地名称: 
-采样率: 0
----
-名称: cs-CZ-VlastaNeural
-性别: Female
-语言: cs-CZ
-本地名称: 
-采样率: 0
----
-名称: da-DK-ChristelNeural
-性别: Female
-语言: da-DK
-本地名称: 
-采样率: 0
----
-名称: da-DK-JeppeNeural
-性别: Male
-语言: da-DK
-本地名称: 
-采样率: 0
----
-名称: nl-BE-ArnaudNeural
-性别: Male
-语言: nl-BE
-本地名称: 
-采样率: 0
----
-名称: nl-BE-DenaNeural
-性别: Female
-语言: nl-BE
-本地名称: 
-采样率: 0
----
-名称: nl-NL-ColetteNeural
-性别: Female
-语言: nl-NL
-本地名称: 
-采样率: 0
----
-名称: nl-NL-FennaNeural
-性别: Female
-语言: nl-NL
-本地名称: 
-采样率: 0
----
-名称: nl-NL-MaartenNeural
-性别: Male
-语言: nl-NL
-本地名称: 
-采样率: 0
----
-名称: en-AU-NatashaNeural
-性别: Female
-语言: en-AU
-本地名称: 
-采样率: 0
----
-名称: en-AU-WilliamNeural
-性别: Male
-语言: en-AU
-本地名称: 
-采样率: 0
----
-名称: en-CA-ClaraNeural
-性别: Female
-语言: en-CA
-本地名称: 
-采样率: 0
----
-名称: en-CA-LiamNeural
-性别: Male
-语言: en-CA
-本地名称: 
-采样率: 0
----
-名称: en-HK-YanNeural
-性别: Female
-语言: en-HK
-本地名称: 
-采样率: 0
----
-名称: en-HK-SamNeural
-性别: Male
-语言: en-HK
-本地名称: 
-采样率: 0
----
-名称: en-IN-NeerjaExpressiveNeural
-性别: Female
-语言: en-IN
-本地名称: 
-采样率: 0
----
-名称: en-IN-NeerjaNeural
-性别: Female
-语言: en-IN
-本地名称: 
-采样率: 0
----
-名称: en-IN-PrabhatNeural
-性别: Male
-语言: en-IN
-本地名称: 
-采样率: 0
----
-名称: en-IE-ConnorNeural
-性别: Male
-语言: en-IE
-本地名称: 
-采样率: 0
----
-名称: en-IE-EmilyNeural
-性别: Female
-语言: en-IE
-本地名称: 
-采样率: 0
----
-名称: en-KE-AsiliaNeural
-性别: Female
-语言: en-KE
-本地名称: 
-采样率: 0
----
-名称: en-KE-ChilembaNeural
-性别: Male
-语言: en-KE
-本地名称: 
-采样率: 0
----
-名称: en-NZ-MitchellNeural
-性别: Male
-语言: en-NZ
-本地名称: 
-采样率: 0
----
-名称: en-NZ-MollyNeural
-性别: Female
-语言: en-NZ
-本地名称: 
-采样率: 0
----
-名称: en-NG-AbeoNeural
-性别: Male
-语言: en-NG
-本地名称: 
-采样率: 0
----
-名称: en-NG-EzinneNeural
-性别: Female
-语言: en-NG
-本地名称: 
-采样率: 0
----
-名称: en-PH-JamesNeural
-性别: Male
-语言: en-PH
-本地名称: 
-采样率: 0
----
-名称: en-PH-RosaNeural
-性别: Female
-语言: en-PH
-本地名称: 
-采样率: 0
----
-名称: en-US-AvaNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-AndrewNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-EmmaNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-BrianNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-SG-LunaNeural
-性别: Female
-语言: en-SG
-本地名称: 
-采样率: 0
----
-名称: en-SG-WayneNeural
-性别: Male
-语言: en-SG
-本地名称: 
-采样率: 0
----
-名称: en-ZA-LeahNeural
-性别: Female
-语言: en-ZA
-本地名称: 
-采样率: 0
----
-名称: en-ZA-LukeNeural
-性别: Male
-语言: en-ZA
-本地名称: 
-采样率: 0
----
-名称: en-TZ-ElimuNeural
-性别: Male
-语言: en-TZ
-本地名称: 
-采样率: 0
----
-名称: en-TZ-ImaniNeural
-性别: Female
-语言: en-TZ
-本地名称: 
-采样率: 0
----
-名称: en-GB-LibbyNeural
-性别: Female
-语言: en-GB
-本地名称: 
-采样率: 0
----
-名称: en-GB-MaisieNeural
-性别: Female
-语言: en-GB
-本地名称: 
-采样率: 0
----
-名称: en-GB-RyanNeural
-性别: Male
-语言: en-GB
-本地名称: 
-采样率: 0
----
-名称: en-GB-SoniaNeural
-性别: Female
-语言: en-GB
-本地名称: 
-采样率: 0
----
-名称: en-GB-ThomasNeural
-性别: Male
-语言: en-GB
-本地名称: 
-采样率: 0
----
-名称: en-US-AnaNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-AndrewMultilingualNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-AriaNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-AvaMultilingualNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-BrianMultilingualNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-ChristopherNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-EmmaMultilingualNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-EricNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-GuyNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-JennyNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-MichelleNeural
-性别: Female
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-RogerNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: en-US-SteffanNeural
-性别: Male
-语言: en-US
-本地名称: 
-采样率: 0
----
-名称: et-EE-AnuNeural
-性别: Female
-语言: et-EE
-本地名称: 
-采样率: 0
----
-名称: et-EE-KertNeural
-性别: Male
-语言: et-EE
-本地名称: 
-采样率: 0
----
-名称: fil-PH-AngeloNeural
-性别: Male
-语言: fil-PH
-本地名称: 
-采样率: 0
----
-名称: fil-PH-BlessicaNeural
-性别: Female
-语言: fil-PH
-本地名称: 
-采样率: 0
----
-名称: fi-FI-HarriNeural
-性别: Male
-语言: fi-FI
-本地名称: 
-采样率: 0
----
-名称: fi-FI-NooraNeural
-性别: Female
-语言: fi-FI
-本地名称: 
-采样率: 0
----
-名称: fr-BE-CharlineNeural
-性别: Female
-语言: fr-BE
-本地名称: 
-采样率: 0
----
-名称: fr-BE-GerardNeural
-性别: Male
-语言: fr-BE
-本地名称: 
-采样率: 0
----
-名称: fr-CA-ThierryNeural
-性别: Male
-语言: fr-CA
-本地名称: 
-采样率: 0
----
-名称: fr-CA-AntoineNeural
-性别: Male
-语言: fr-CA
-本地名称: 
-采样率: 0
----
-名称: fr-CA-JeanNeural
-性别: Male
-语言: fr-CA
-本地名称: 
-采样率: 0
----
-名称: fr-CA-SylvieNeural
-性别: Female
-语言: fr-CA
-本地名称: 
-采样率: 0
----
-名称: fr-FR-VivienneMultilingualNeural
-性别: Female
-语言: fr-FR
-本地名称: 
-采样率: 0
----
-名称: fr-FR-RemyMultilingualNeural
-性别: Male
-语言: fr-FR
-本地名称: 
-采样率: 0
----
-名称: fr-FR-DeniseNeural
-性别: Female
-语言: fr-FR
-本地名称: 
-采样率: 0
----
-名称: fr-FR-EloiseNeural
-性别: Female
-语言: fr-FR
-本地名称: 
-采样率: 0
----
-名称: fr-FR-HenriNeural
-性别: Male
-语言: fr-FR
-本地名称: 
-采样率: 0
----
-名称: fr-CH-ArianeNeural
-性别: Female
-语言: fr-CH
-本地名称: 
-采样率: 0
----
-名称: fr-CH-FabriceNeural
-性别: Male
-语言: fr-CH
-本地名称: 
-采样率: 0
----
-名称: gl-ES-RoiNeural
-性别: Male
-语言: gl-ES
-本地名称: 
-采样率: 0
----
-名称: gl-ES-SabelaNeural
-性别: Female
-语言: gl-ES
-本地名称: 
-采样率: 0
----
-名称: ka-GE-EkaNeural
-性别: Female
-语言: ka-GE
-本地名称: 
-采样率: 0
----
-名称: ka-GE-GiorgiNeural
-性别: Male
-语言: ka-GE
-本地名称: 
-采样率: 0
----
-名称: de-AT-IngridNeural
-性别: Female
-语言: de-AT
-本地名称: 
-采样率: 0
----
-名称: de-AT-JonasNeural
-性别: Male
-语言: de-AT
-本地名称: 
-采样率: 0
----
-名称: de-DE-SeraphinaMultilingualNeural
-性别: Female
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-DE-FlorianMultilingualNeural
-性别: Male
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-DE-AmalaNeural
-性别: Female
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-DE-ConradNeural
-性别: Male
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-DE-KatjaNeural
-性别: Female
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-DE-KillianNeural
-性别: Male
-语言: de-DE
-本地名称: 
-采样率: 0
----
-名称: de-CH-JanNeural
-性别: Male
-语言: de-CH
-本地名称: 
-采样率: 0
----
-名称: de-CH-LeniNeural
-性别: Female
-语言: de-CH
-本地名称: 
-采样率: 0
----
-名称: el-GR-AthinaNeural
-性别: Female
-语言: el-GR
-本地名称: 
-采样率: 0
----
-名称: el-GR-NestorasNeural
-性别: Male
-语言: el-GR
-本地名称: 
-采样率: 0
----
-名称: gu-IN-DhwaniNeural
-性别: Female
-语言: gu-IN
-本地名称: 
-采样率: 0
----
-名称: gu-IN-NiranjanNeural
-性别: Male
-语言: gu-IN
-本地名称: 
-采样率: 0
----
-名称: he-IL-AvriNeural
-性别: Male
-语言: he-IL
-本地名称: 
-采样率: 0
----
-名称: he-IL-HilaNeural
-性别: Female
-语言: he-IL
-本地名称: 
-采样率: 0
----
-名称: hi-IN-MadhurNeural
-性别: Male
-语言: hi-IN
-本地名称: 
-采样率: 0
----
-名称: hi-IN-SwaraNeural
-性别: Female
-语言: hi-IN
-本地名称: 
-采样率: 0
----
-名称: hu-HU-NoemiNeural
-性别: Female
-语言: hu-HU
-本地名称: 
-采样率: 0
----
-名称: hu-HU-TamasNeural
-性别: Male
-语言: hu-HU
-本地名称: 
-采样率: 0
----
-名称: is-IS-GudrunNeural
-性别: Female
-语言: is-IS
-本地名称: 
-采样率: 0
----
-名称: is-IS-GunnarNeural
-性别: Male
-语言: is-IS
-本地名称: 
-采样率: 0
----
-名称: id-ID-ArdiNeural
-性别: Male
-语言: id-ID
-本地名称: 
-采样率: 0
----
-名称: id-ID-GadisNeural
-性别: Female
-语言: id-ID
-本地名称: 
-采样率: 0
----
-名称: iu-Latn-CA-SiqiniqNeural
-性别: Female
-语言: iu-Latn-CA
-本地名称: 
-采样率: 0
----
-名称: iu-Latn-CA-TaqqiqNeural
-性别: Male
-语言: iu-Latn-CA
-本地名称: 
-采样率: 0
----
-名称: iu-Cans-CA-SiqiniqNeural
-性别: Female
-语言: iu-Cans-CA
-本地名称: 
-采样率: 0
----
-名称: iu-Cans-CA-TaqqiqNeural
-性别: Male
-语言: iu-Cans-CA
-本地名称: 
-采样率: 0
----
-名称: ga-IE-ColmNeural
-性别: Male
-语言: ga-IE
-本地名称: 
-采样率: 0
----
-名称: ga-IE-OrlaNeural
-性别: Female
-语言: ga-IE
-本地名称: 
-采样率: 0
----
-名称: it-IT-GiuseppeMultilingualNeural
-性别: Male
-语言: it-IT
-本地名称: 
-采样率: 0
----
-名称: it-IT-DiegoNeural
-性别: Male
-语言: it-IT
-本地名称: 
-采样率: 0
----
-名称: it-IT-ElsaNeural
-性别: Female
-语言: it-IT
-本地名称: 
-采样率: 0
----
-名称: it-IT-IsabellaNeural
-性别: Female
-语言: it-IT
-本地名称: 
-采样率: 0
----
-名称: ja-JP-KeitaNeural
-性别: Male
-语言: ja-JP
-本地名称: 
-采样率: 0
----
-名称: ja-JP-NanamiNeural
-性别: Female
-语言: ja-JP
-本地名称: 
-采样率: 0
----
-名称: jv-ID-DimasNeural
-性别: Male
-语言: jv-ID
-本地名称: 
-采样率: 0
----
-名称: jv-ID-SitiNeural
-性别: Female
-语言: jv-ID
-本地名称: 
-采样率: 0
----
-名称: kn-IN-GaganNeural
-性别: Male
-语言: kn-IN
-本地名称: 
-采样率: 0
----
-名称: kn-IN-SapnaNeural
-性别: Female
-语言: kn-IN
-本地名称: 
-采样率: 0
----
-名称: kk-KZ-AigulNeural
-性别: Female
-语言: kk-KZ
-本地名称: 
-采样率: 0
----
-名称: kk-KZ-DauletNeural
-性别: Male
-语言: kk-KZ
-本地名称: 
-采样率: 0
----
-名称: km-KH-PisethNeural
-性别: Male
-语言: km-KH
-本地名称: 
-采样率: 0
----
-名称: km-KH-SreymomNeural
-性别: Female
-语言: km-KH
-本地名称: 
-采样率: 0
----
-名称: ko-KR-HyunsuMultilingualNeural
-性别: Male
-语言: ko-KR
-本地名称: 
-采样率: 0
----
-名称: ko-KR-InJoonNeural
-性别: Male
-语言: ko-KR
-本地名称: 
-采样率: 0
----
-名称: ko-KR-SunHiNeural
-性别: Female
-语言: ko-KR
-本地名称: 
-采样率: 0
----
-名称: lo-LA-ChanthavongNeural
-性别: Male
-语言: lo-LA
-本地名称: 
-采样率: 0
----
-名称: lo-LA-KeomanyNeural
-性别: Female
-语言: lo-LA
-本地名称: 
-采样率: 0
----
-名称: lv-LV-EveritaNeural
-性别: Female
-语言: lv-LV
-本地名称: 
-采样率: 0
----
-名称: lv-LV-NilsNeural
-性别: Male
-语言: lv-LV
-本地名称: 
-采样率: 0
----
-名称: lt-LT-LeonasNeural
-性别: Male
-语言: lt-LT
-本地名称: 
-采样率: 0
----
-名称: lt-LT-OnaNeural
-性别: Female
-语言: lt-LT
-本地名称: 
-采样率: 0
----
-名称: mk-MK-AleksandarNeural
-性别: Male
-语言: mk-MK
-本地名称: 
-采样率: 0
----
-名称: mk-MK-MarijaNeural
-性别: Female
-语言: mk-MK
-本地名称: 
-采样率: 0
----
-名称: ms-MY-OsmanNeural
-性别: Male
-语言: ms-MY
-本地名称: 
-采样率: 0
----
-名称: ms-MY-YasminNeural
-性别: Female
-语言: ms-MY
-本地名称: 
-采样率: 0
----
-名称: ml-IN-MidhunNeural
-性别: Male
-语言: ml-IN
-本地名称: 
-采样率: 0
----
-名称: ml-IN-SobhanaNeural
-性别: Female
-语言: ml-IN
-本地名称: 
-采样率: 0
----
-名称: mt-MT-GraceNeural
-性别: Female
-语言: mt-MT
-本地名称: 
-采样率: 0
----
-名称: mt-MT-JosephNeural
-性别: Male
-语言: mt-MT
-本地名称: 
-采样率: 0
----
-名称: mr-IN-AarohiNeural
-性别: Female
-语言: mr-IN
-本地名称: 
-采样率: 0
----
-名称: mr-IN-ManoharNeural
-性别: Male
-语言: mr-IN
-本地名称: 
-采样率: 0
----
-名称: mn-MN-BataaNeural
-性别: Male
-语言: mn-MN
-本地名称: 
-采样率: 0
----
-名称: mn-MN-YesuiNeural
-性别: Female
-语言: mn-MN
-本地名称: 
-采样率: 0
----
-名称: ne-NP-HemkalaNeural
-性别: Female
-语言: ne-NP
-本地名称: 
-采样率: 0
----
-名称: ne-NP-SagarNeural
-性别: Male
-语言: ne-NP
-本地名称: 
-采样率: 0
----
-名称: nb-NO-FinnNeural
-性别: Male
-语言: nb-NO
-本地名称: 
-采样率: 0
----
-名称: nb-NO-PernilleNeural
-性别: Female
-语言: nb-NO
-本地名称: 
-采样率: 0
----
-名称: ps-AF-GulNawazNeural
-性别: Male
-语言: ps-AF
-本地名称: 
-采样率: 0
----
-名称: ps-AF-LatifaNeural
-性别: Female
-语言: ps-AF
-本地名称: 
-采样率: 0
----
-名称: fa-IR-DilaraNeural
-性别: Female
-语言: fa-IR
-本地名称: 
-采样率: 0
----
-名称: fa-IR-FaridNeural
-性别: Male
-语言: fa-IR
-本地名称: 
-采样率: 0
----
-名称: pl-PL-MarekNeural
-性别: Male
-语言: pl-PL
-本地名称: 
-采样率: 0
----
-名称: pl-PL-ZofiaNeural
-性别: Female
-语言: pl-PL
-本地名称: 
-采样率: 0
----
-名称: pt-BR-ThalitaMultilingualNeural
-性别: Female
-语言: pt-BR
-本地名称: 
-采样率: 0
----
-名称: pt-BR-AntonioNeural
-性别: Male
-语言: pt-BR
-本地名称: 
-采样率: 0
----
-名称: pt-BR-FranciscaNeural
-性别: Female
-语言: pt-BR
-本地名称: 
-采样率: 0
----
-名称: pt-PT-DuarteNeural
-性别: Male
-语言: pt-PT
-本地名称: 
-采样率: 0
----
-名称: pt-PT-RaquelNeural
-性别: Female
-语言: pt-PT
-本地名称: 
-采样率: 0
----
-名称: ro-RO-AlinaNeural
-性别: Female
-语言: ro-RO
-本地名称: 
-采样率: 0
----
-名称: ro-RO-EmilNeural
-性别: Male
-语言: ro-RO
-本地名称: 
-采样率: 0
----
-名称: ru-RU-DmitryNeural
-性别: Male
-语言: ru-RU
-本地名称: 
-采样率: 0
----
-名称: ru-RU-SvetlanaNeural
-性别: Female
-语言: ru-RU
-本地名称: 
-采样率: 0
----
-名称: sr-RS-NicholasNeural
-性别: Male
-语言: sr-RS
-本地名称: 
-采样率: 0
----
-名称: sr-RS-SophieNeural
-性别: Female
-语言: sr-RS
-本地名称: 
-采样率: 0
----
-名称: si-LK-SameeraNeural
-性别: Male
-语言: si-LK
-本地名称: 
-采样率: 0
----
-名称: si-LK-ThiliniNeural
-性别: Female
-语言: si-LK
-本地名称: 
-采样率: 0
----
-名称: sk-SK-LukasNeural
-性别: Male
-语言: sk-SK
-本地名称: 
-采样率: 0
----
-名称: sk-SK-ViktoriaNeural
-性别: Female
-语言: sk-SK
-本地名称: 
-采样率: 0
----
-名称: sl-SI-PetraNeural
-性别: Female
-语言: sl-SI
-本地名称: 
-采样率: 0
----
-名称: sl-SI-RokNeural
-性别: Male
-语言: sl-SI
-本地名称: 
-采样率: 0
----
-名称: so-SO-MuuseNeural
-性别: Male
-语言: so-SO
-本地名称: 
-采样率: 0
----
-名称: so-SO-UbaxNeural
-性别: Female
-语言: so-SO
-本地名称: 
-采样率: 0
----
-名称: es-AR-ElenaNeural
-性别: Female
-语言: es-AR
-本地名称: 
-采样率: 0
----
-名称: es-AR-TomasNeural
-性别: Male
-语言: es-AR
-本地名称: 
-采样率: 0
----
-名称: es-BO-MarceloNeural
-性别: Male
-语言: es-BO
-本地名称: 
-采样率: 0
----
-名称: es-BO-SofiaNeural
-性别: Female
-语言: es-BO
-本地名称: 
-采样率: 0
----
-名称: es-CL-CatalinaNeural
-性别: Female
-语言: es-CL
-本地名称: 
-采样率: 0
----
-名称: es-CL-LorenzoNeural
-性别: Male
-语言: es-CL
-本地名称: 
-采样率: 0
----
-名称: es-CO-GonzaloNeural
-性别: Male
-语言: es-CO
-本地名称: 
-采样率: 0
----
-名称: es-CO-SalomeNeural
-性别: Female
-语言: es-CO
-本地名称: 
-采样率: 0
----
-名称: es-ES-XimenaNeural
-性别: Female
-语言: es-ES
-本地名称: 
-采样率: 0
----
-名称: es-CR-JuanNeural
-性别: Male
-语言: es-CR
-本地名称: 
-采样率: 0
----
-名称: es-CR-MariaNeural
-性别: Female
-语言: es-CR
-本地名称: 
-采样率: 0
----
-名称: es-CU-BelkysNeural
-性别: Female
-语言: es-CU
-本地名称: 
-采样率: 0
----
-名称: es-CU-ManuelNeural
-性别: Male
-语言: es-CU
-本地名称: 
-采样率: 0
----
-名称: es-DO-EmilioNeural
-性别: Male
-语言: es-DO
-本地名称: 
-采样率: 0
----
-名称: es-DO-RamonaNeural
-性别: Female
-语言: es-DO
-本地名称: 
-采样率: 0
----
-名称: es-EC-AndreaNeural
-性别: Female
-语言: es-EC
-本地名称: 
-采样率: 0
----
-名称: es-EC-LuisNeural
-性别: Male
-语言: es-EC
-本地名称: 
-采样率: 0
----
-名称: es-SV-LorenaNeural
-性别: Female
-语言: es-SV
-本地名称: 
-采样率: 0
----
-名称: es-SV-RodrigoNeural
-性别: Male
-语言: es-SV
-本地名称: 
-采样率: 0
----
-名称: es-GQ-JavierNeural
-性别: Male
-语言: es-GQ
-本地名称: 
-采样率: 0
----
-名称: es-GQ-TeresaNeural
-性别: Female
-语言: es-GQ
-本地名称: 
-采样率: 0
----
-名称: es-GT-AndresNeural
-性别: Male
-语言: es-GT
-本地名称: 
-采样率: 0
----
-名称: es-GT-MartaNeural
-性别: Female
-语言: es-GT
-本地名称: 
-采样率: 0
----
-名称: es-HN-CarlosNeural
-性别: Male
-语言: es-HN
-本地名称: 
-采样率: 0
----
-名称: es-HN-KarlaNeural
-性别: Female
-语言: es-HN
-本地名称: 
-采样率: 0
----
-名称: es-MX-DaliaNeural
-性别: Female
-语言: es-MX
-本地名称: 
-采样率: 0
----
-名称: es-MX-JorgeNeural
-性别: Male
-语言: es-MX
-本地名称: 
-采样率: 0
----
-名称: es-NI-FedericoNeural
-性别: Male
-语言: es-NI
-本地名称: 
-采样率: 0
----
-名称: es-NI-YolandaNeural
-性别: Female
-语言: es-NI
-本地名称: 
-采样率: 0
----
-名称: es-PA-MargaritaNeural
-性别: Female
-语言: es-PA
-本地名称: 
-采样率: 0
----
-名称: es-PA-RobertoNeural
-性别: Male
-语言: es-PA
-本地名称: 
-采样率: 0
----
-名称: es-PY-MarioNeural
-性别: Male
-语言: es-PY
-本地名称: 
-采样率: 0
----
-名称: es-PY-TaniaNeural
-性别: Female
-语言: es-PY
-本地名称: 
-采样率: 0
----
-名称: es-PE-AlexNeural
-性别: Male
-语言: es-PE
-本地名称: 
-采样率: 0
----
-名称: es-PE-CamilaNeural
-性别: Female
-语言: es-PE
-本地名称: 
-采样率: 0
----
-名称: es-PR-KarinaNeural
-性别: Female
-语言: es-PR
-本地名称: 
-采样率: 0
----
-名称: es-PR-VictorNeural
-性别: Male
-语言: es-PR
-本地名称: 
-采样率: 0
----
-名称: es-ES-AlvaroNeural
-性别: Male
-语言: es-ES
-本地名称: 
-采样率: 0
----
-名称: es-ES-ElviraNeural
-性别: Female
-语言: es-ES
-本地名称: 
-采样率: 0
----
-名称: es-US-AlonsoNeural
-性别: Male
-语言: es-US
-本地名称: 
-采样率: 0
----
-名称: es-US-PalomaNeural
-性别: Female
-语言: es-US
-本地名称: 
-采样率: 0
----
-名称: es-UY-MateoNeural
-性别: Male
-语言: es-UY
-本地名称: 
-采样率: 0
----
-名称: es-UY-ValentinaNeural
-性别: Female
-语言: es-UY
-本地名称: 
-采样率: 0
----
-名称: es-VE-PaolaNeural
-性别: Female
-语言: es-VE
-本地名称: 
-采样率: 0
----
-名称: es-VE-SebastianNeural
-性别: Male
-语言: es-VE
-本地名称: 
-采样率: 0
----
-名称: su-ID-JajangNeural
-性别: Male
-语言: su-ID
-本地名称: 
-采样率: 0
----
-名称: su-ID-TutiNeural
-性别: Female
-语言: su-ID
-本地名称: 
-采样率: 0
----
-名称: sw-KE-RafikiNeural
-性别: Male
-语言: sw-KE
-本地名称: 
-采样率: 0
----
-名称: sw-KE-ZuriNeural
-性别: Female
-语言: sw-KE
-本地名称: 
-采样率: 0
----
-名称: sw-TZ-DaudiNeural
-性别: Male
-语言: sw-TZ
-本地名称: 
-采样率: 0
----
-名称: sw-TZ-RehemaNeural
-性别: Female
-语言: sw-TZ
-本地名称: 
-采样率: 0
----
-名称: sv-SE-MattiasNeural
-性别: Male
-语言: sv-SE
-本地名称: 
-采样率: 0
----
-名称: sv-SE-SofieNeural
-性别: Female
-语言: sv-SE
-本地名称: 
-采样率: 0
----
-名称: ta-IN-PallaviNeural
-性别: Female
-语言: ta-IN
-本地名称: 
-采样率: 0
----
-名称: ta-IN-ValluvarNeural
-性别: Male
-语言: ta-IN
-本地名称: 
-采样率: 0
----
-名称: ta-MY-KaniNeural
-性别: Female
-语言: ta-MY
-本地名称: 
-采样率: 0
----
-名称: ta-MY-SuryaNeural
-性别: Male
-语言: ta-MY
-本地名称: 
-采样率: 0
----
-名称: ta-SG-AnbuNeural
-性别: Male
-语言: ta-SG
-本地名称: 
-采样率: 0
----
-名称: ta-SG-VenbaNeural
-性别: Female
-语言: ta-SG
-本地名称: 
-采样率: 0
----
-名称: ta-LK-KumarNeural
-性别: Male
-语言: ta-LK
-本地名称: 
-采样率: 0
----
-名称: ta-LK-SaranyaNeural
-性别: Female
-语言: ta-LK
-本地名称: 
-采样率: 0
----
-名称: te-IN-MohanNeural
-性别: Male
-语言: te-IN
-本地名称: 
-采样率: 0
----
-名称: te-IN-ShrutiNeural
-性别: Female
-语言: te-IN
-本地名称: 
-采样率: 0
----
-名称: th-TH-NiwatNeural
-性别: Male
-语言: th-TH
-本地名称: 
-采样率: 0
----
-名称: th-TH-PremwadeeNeural
-性别: Female
-语言: th-TH
-本地名称: 
-采样率: 0
----
-名称: tr-TR-EmelNeural
-性别: Female
-语言: tr-TR
-本地名称: 
-采样率: 0
----
-名称: tr-TR-AhmetNeural
-性别: Male
-语言: tr-TR
-本地名称: 
-采样率: 0
----
-名称: uk-UA-OstapNeural
-性别: Male
-语言: uk-UA
-本地名称: 
-采样率: 0
----
-名称: uk-UA-PolinaNeural
-性别: Female
-语言: uk-UA
-本地名称: 
-采样率: 0
----
-名称: ur-IN-GulNeural
-性别: Female
-语言: ur-IN
-本地名称: 
-采样率: 0
----
-名称: ur-IN-SalmanNeural
-性别: Male
-语言: ur-IN
-本地名称: 
-采样率: 0
----
-名称: ur-PK-AsadNeural
-性别: Male
-语言: ur-PK
-本地名称: 
-采样率: 0
----
-名称: ur-PK-UzmaNeural
-性别: Female
-语言: ur-PK
-本地名称: 
-采样率: 0
----
-名称: uz-UZ-MadinaNeural
-性别: Female
-语言: uz-UZ
-本地名称: 
-采样率: 0
----
-名称: uz-UZ-SardorNeural
-性别: Male
-语言: uz-UZ
-本地名称: 
-采样率: 0
----
-名称: vi-VN-HoaiMyNeural
-性别: Female
-语言: vi-VN
-本地名称: 
-采样率: 0
----
-名称: vi-VN-NamMinhNeural
-性别: Male
-语言: vi-VN
-本地名称: 
-采样率: 0
----
-名称: cy-GB-AledNeural
-性别: Male
-语言: cy-GB
-本地名称: 
-采样率: 0
----
-名称: cy-GB-NiaNeural
-性别: Female
-语言: cy-GB
-本地名称: 
-采样率: 0
----
-名称: zu-ZA-ThandoNeural
-性别: Female
-语言: zu-ZA
-本地名称: 
-采样率: 0
----
-名称: zu-ZA-ThembaNeural
-性别: Male
-语言: zu-ZA
-本地名称: 
-采样率: 0
----
+| Name | Gender | ContentCategories | VoicePersonalities |
+|------|--------|------------------|-------------------|
+| af-ZA-AdriNeural | Female | General | Friendly, Positive |
+| af-ZA-WillemNeural | Male | General | Friendly, Positive |
+| sq-AL-AnilaNeural | Female | General | Friendly, Positive |
+| sq-AL-IlirNeural | Male | General | Friendly, Positive |
+| am-ET-AmehaNeural | Male | General | Friendly, Positive |
+| am-ET-MekdesNeural | Female | General | Friendly, Positive |
+| ar-DZ-AminaNeural | Female | General | Friendly, Positive |
+| ar-DZ-IsmaelNeural | Male | General | Friendly, Positive |
+| ar-BH-AliNeural | Male | General | Friendly, Positive |
+| ar-BH-LailaNeural | Female | General | Friendly, Positive |
+| ar-EG-SalmaNeural | Female | General | Friendly, Positive |
+| ar-EG-ShakirNeural | Male | General | Friendly, Positive |
+| ar-IQ-BasselNeural | Male | General | Friendly, Positive |
+| ar-IQ-RanaNeural | Female | General | Friendly, Positive |
+| ar-JO-SanaNeural | Female | General | Friendly, Positive |
+| ar-JO-TaimNeural | Male | General | Friendly, Positive |
+| ar-KW-FahedNeural | Male | General | Friendly, Positive |
+| ar-KW-NouraNeural | Female | General | Friendly, Positive |
+| ar-LB-LaylaNeural | Female | General | Friendly, Positive |
+| ar-LB-RamiNeural | Male | General | Friendly, Positive |
+| ar-LY-ImanNeural | Female | General | Friendly, Positive |
+| ar-LY-OmarNeural | Male | General | Friendly, Positive |
+| ar-MA-JamalNeural | Male | General | Friendly, Positive |
+| ar-MA-MounaNeural | Female | General | Friendly, Positive |
+| ar-OM-AbdullahNeural | Male | General | Friendly, Positive |
+| ar-OM-AyshaNeural | Female | General | Friendly, Positive |
+| ar-QA-AmalNeural | Female | General | Friendly, Positive |
+| ar-QA-MoazNeural | Male | General | Friendly, Positive |
+| ar-SA-HamedNeural | Male | General | Friendly, Positive |
+| ar-SA-ZariyahNeural | Female | General | Friendly, Positive |
+| ar-SY-AmanyNeural | Female | General | Friendly, Positive |
+| ar-SY-LaithNeural | Male | General | Friendly, Positive |
+| ar-TN-HediNeural | Male | General | Friendly, Positive |
+| ar-TN-ReemNeural | Female | General | Friendly, Positive |
+| ar-AE-FatimaNeural | Female | General | Friendly, Positive |
+| ar-AE-HamdanNeural | Male | General | Friendly, Positive |
+| ar-YE-MaryamNeural | Female | General | Friendly, Positive |
+| ar-YE-SalehNeural | Male | General | Friendly, Positive |
+| az-AZ-BabekNeural | Male | General | Friendly, Positive |
+| az-AZ-BanuNeural | Female | General | Friendly, Positive |
+| bn-BD-NabanitaNeural | Female | General | Friendly, Positive |
+| bn-BD-PradeepNeural | Male | General | Friendly, Positive |
+| bn-IN-BashkarNeural | Male | General | Friendly, Positive |
+| bn-IN-TanishaaNeural | Female | General | Friendly, Positive |
+| bs-BA-VesnaNeural | Female | General | Friendly, Positive |
+| bs-BA-GoranNeural | Male | General | Friendly, Positive |
+| bg-BG-BorislavNeural | Male | General | Friendly, Positive |
+| bg-BG-KalinaNeural | Female | General | Friendly, Positive |
+| my-MM-NilarNeural | Female | General | Friendly, Positive |
+| my-MM-ThihaNeural | Male | General | Friendly, Positive |
+| ca-ES-EnricNeural | Male | General | Friendly, Positive |
+| ca-ES-JoanaNeural | Female | General | Friendly, Positive |
+| zh-HK-HiuGaaiNeural | Female | General | Friendly, Positive |
+| zh-HK-HiuMaanNeural | Female | General | Friendly, Positive |
+| zh-HK-WanLungNeural | Male | General | Friendly, Positive |
+| zh-CN-XiaoxiaoNeural | Female | General | Friendly, Positive |
+| zh-CN-XiaoyiNeural | Female | General | Friendly, Positive |
+| zh-CN-YunjianNeural | Male | General | Friendly, Positive |
+| zh-CN-YunxiNeural | Male | General | Friendly, Positive |
+| zh-CN-YunxiaNeural | Male | General | Friendly, Positive |
+| zh-CN-YunyangNeural | Male | General | Friendly, Positive |
+| zh-CN-liaoning-XiaobeiNeural | Female | General | Friendly, Positive |
+| zh-TW-HsiaoChenNeural | Female | General | Friendly, Positive |
+| zh-TW-YunJheNeural | Male | General | Friendly, Positive |
+| zh-TW-HsiaoYuNeural | Female | General | Friendly, Positive |
+| zh-CN-shaanxi-XiaoniNeural | Female | General | Friendly, Positive |
+| hr-HR-GabrijelaNeural | Female | General | Friendly, Positive |
+| hr-HR-SreckoNeural | Male | General | Friendly, Positive |
+| cs-CZ-AntoninNeural | Male | General | Friendly, Positive |
+| cs-CZ-VlastaNeural | Female | General | Friendly, Positive |
+| da-DK-ChristelNeural | Female | General | Friendly, Positive |
+| da-DK-JeppeNeural | Male | General | Friendly, Positive |
+| nl-BE-ArnaudNeural | Male | General | Friendly, Positive |
+| nl-BE-DenaNeural | Female | General | Friendly, Positive |
+| nl-NL-ColetteNeural | Female | General | Friendly, Positive |
+| nl-NL-FennaNeural | Female | General | Friendly, Positive |
+| nl-NL-MaartenNeural | Male | General | Friendly, Positive |
+| en-AU-NatashaNeural | Female | General | Friendly, Positive |
+| en-AU-WilliamNeural | Male | General | Friendly, Positive |
+| en-CA-ClaraNeural | Female | General | Friendly, Positive |
+| en-CA-LiamNeural | Male | General | Friendly, Positive |
+| en-HK-YanNeural | Female | General | Friendly, Positive |
+| en-HK-SamNeural | Male | General | Friendly, Positive |
+| en-IN-NeerjaExpressiveNeural | Female | General | Friendly, Positive |
+| en-IN-NeerjaNeural | Female | General | Friendly, Positive |
+| en-IN-PrabhatNeural | Male | General | Friendly, Positive |
+| en-IE-ConnorNeural | Male | General | Friendly, Positive |
+| en-IE-EmilyNeural | Female | General | Friendly, Positive |
+| en-KE-AsiliaNeural | Female | General | Friendly, Positive |
+| en-KE-ChilembaNeural | Male | General | Friendly, Positive |
+| en-NZ-MitchellNeural | Male | General | Friendly, Positive |
+| en-NZ-MollyNeural | Female | General | Friendly, Positive |
+| en-NG-AbeoNeural | Male | General | Friendly, Positive |
+| en-NG-EzinneNeural | Female | General | Friendly, Positive |
+| en-PH-JamesNeural | Male | General | Friendly, Positive |
+| en-PH-RosaNeural | Female | General | Friendly, Positive |
+| en-US-AvaNeural | Female | General | Friendly, Positive |
+| en-US-AndrewNeural | Male | General | Friendly, Positive |
+| en-US-EmmaNeural | Female | General | Friendly, Positive |
+| en-US-BrianNeural | Male | General | Friendly, Positive |
+| en-SG-LunaNeural | Female | General | Friendly, Positive |
+| en-SG-WayneNeural | Male | General | Friendly, Positive |
+| en-ZA-LeahNeural | Female | General | Friendly, Positive |
+| en-ZA-LukeNeural | Male | General | Friendly, Positive |
+| en-TZ-ElimuNeural | Male | General | Friendly, Positive |
+| en-TZ-ImaniNeural | Female | General | Friendly, Positive |
+| en-GB-LibbyNeural | Female | General | Friendly, Positive |
+| en-GB-MaisieNeural | Female | General | Friendly, Positive |
+| en-GB-RyanNeural | Male | General | Friendly, Positive |
+| en-GB-SoniaNeural | Female | General | Friendly, Positive |
+| en-GB-ThomasNeural | Male | General | Friendly, Positive |
+| en-US-AnaNeural | Female | General | Friendly, Positive |
+| en-US-AndrewMultilingualNeural | Male | General | Friendly, Positive |
+| en-US-AriaNeural | Female | General | Friendly, Positive |
+| en-US-AvaMultilingualNeural | Female | General | Friendly, Positive |
+| en-US-BrianMultilingualNeural | Male | General | Friendly, Positive |
+| en-US-ChristopherNeural | Male | General | Friendly, Positive |
+| en-US-EmmaMultilingualNeural | Female | General | Friendly, Positive |
+| en-US-EricNeural | Male | General | Friendly, Positive |
+| en-US-GuyNeural | Male | General | Friendly, Positive |
+| en-US-JennyNeural | Female | General | Friendly, Positive |
+| en-US-MichelleNeural | Female | General | Friendly, Positive |
+| en-US-RogerNeural | Male | General | Friendly, Positive |
+| en-US-SteffanNeural | Male | General | Friendly, Positive |
+| et-EE-AnuNeural | Female | General | Friendly, Positive |
+| et-EE-KertNeural | Male | General | Friendly, Positive |
+| fil-PH-AngeloNeural | Male | General | Friendly, Positive |
+| fil-PH-BlessicaNeural | Female | General | Friendly, Positive |
+| fi-FI-HarriNeural | Male | General | Friendly, Positive |
+| fi-FI-NooraNeural | Female | General | Friendly, Positive |
+| fr-BE-CharlineNeural | Female | General | Friendly, Positive |
+| fr-BE-GerardNeural | Male | General | Friendly, Positive |
+| fr-CA-ThierryNeural | Male | General | Friendly, Positive |
+| fr-CA-AntoineNeural | Male | General | Friendly, Positive |
+| fr-CA-JeanNeural | Male | General | Friendly, Positive |
+| fr-CA-SylvieNeural | Female | General | Friendly, Positive |
+| fr-FR-VivienneMultilingualNeural | Female | General | Friendly, Positive |
+| fr-FR-RemyMultilingualNeural | Male | General | Friendly, Positive |
+| fr-FR-DeniseNeural | Female | General | Friendly, Positive |
+| fr-FR-EloiseNeural | Female | General | Friendly, Positive |
+| fr-FR-HenriNeural | Male | General | Friendly, Positive |
+| fr-CH-ArianeNeural | Female | General | Friendly, Positive |
+| fr-CH-FabriceNeural | Male | General | Friendly, Positive |
+| gl-ES-RoiNeural | Male | General | Friendly, Positive |
+| gl-ES-SabelaNeural | Female | General | Friendly, Positive |
+| ka-GE-EkaNeural | Female | General | Friendly, Positive |
+| ka-GE-GiorgiNeural | Male | General | Friendly, Positive |
+| de-AT-IngridNeural | Female | General | Friendly, Positive |
+| de-AT-JonasNeural | Male | General | Friendly, Positive |
+| de-DE-SeraphinaMultilingualNeural | Female | General | Friendly, Positive |
+| de-DE-FlorianMultilingualNeural | Male | General | Friendly, Positive |
+| de-DE-AmalaNeural | Female | General | Friendly, Positive |
+| de-DE-ConradNeural | Male | General | Friendly, Positive |
+| de-DE-KatjaNeural | Female | General | Friendly, Positive |
+| de-DE-KillianNeural | Male | General | Friendly, Positive |
+| de-CH-JanNeural | Male | General | Friendly, Positive |
+| de-CH-LeniNeural | Female | General | Friendly, Positive |
+| el-GR-AthinaNeural | Female | General | Friendly, Positive |
+| el-GR-NestorasNeural | Male | General | Friendly, Positive |
+| gu-IN-DhwaniNeural | Female | General | Friendly, Positive |
+| gu-IN-NiranjanNeural | Male | General | Friendly, Positive |
+| he-IL-AvriNeural | Male | General | Friendly, Positive |
+| he-IL-HilaNeural | Female | General | Friendly, Positive |
+| hi-IN-MadhurNeural | Male | General | Friendly, Positive |
+| hi-IN-SwaraNeural | Female | General | Friendly, Positive |
+| hu-HU-NoemiNeural | Female | General | Friendly, Positive |
+| hu-HU-TamasNeural | Male | General | Friendly, Positive |
+| is-IS-GudrunNeural | Female | General | Friendly, Positive |
+| is-IS-GunnarNeural | Male | General | Friendly, Positive |
+| id-ID-ArdiNeural | Male | General | Friendly, Positive |
+| id-ID-GadisNeural | Female | General | Friendly, Positive |
+| iu-Latn-CA-SiqiniqNeural | Female | General | Friendly, Positive |
+| iu-Latn-CA-TaqqiqNeural | Male | General | Friendly, Positive |
+| iu-Cans-CA-SiqiniqNeural | Female | General | Friendly, Positive |
+| iu-Cans-CA-TaqqiqNeural | Male | General | Friendly, Positive |
+| ga-IE-ColmNeural | Male | General | Friendly, Positive |
+| ga-IE-OrlaNeural | Female | General | Friendly, Positive |
+| it-IT-GiuseppeMultilingualNeural | Male | General | Friendly, Positive |
+| it-IT-DiegoNeural | Male | General | Friendly, Positive |
+| it-IT-ElsaNeural | Female | General | Friendly, Positive |
+| it-IT-IsabellaNeural | Female | General | Friendly, Positive |
+| ja-JP-KeitaNeural | Male | General | Friendly, Positive |
+| ja-JP-NanamiNeural | Female | General | Friendly, Positive |
+| jv-ID-DimasNeural | Male | General | Friendly, Positive |
+| jv-ID-SitiNeural | Female | General | Friendly, Positive |
+| kn-IN-GaganNeural | Male | General | Friendly, Positive |
+| kn-IN-SapnaNeural | Female | General | Friendly, Positive |
+| kk-KZ-AigulNeural | Female | General | Friendly, Positive |
+| kk-KZ-DauletNeural | Male | General | Friendly, Positive |
+| km-KH-PisethNeural | Male | General | Friendly, Positive |
+| km-KH-SreymomNeural | Female | General | Friendly, Positive |
+| ko-KR-HyunsuMultilingualNeural | Male | General | Friendly, Positive |
+| ko-KR-InJoonNeural | Male | General | Friendly, Positive |
+| ko-KR-SunHiNeural | Female | General | Friendly, Positive |
+| lo-LA-ChanthavongNeural | Male | General | Friendly, Positive |
+| lo-LA-KeomanyNeural | Female | General | Friendly, Positive |
+| lv-LV-EveritaNeural | Female | General | Friendly, Positive |
+| lv-LV-NilsNeural | Male | General | Friendly, Positive |
+| lt-LT-LeonasNeural | Male | General | Friendly, Positive |
+| lt-LT-OnaNeural | Female | General | Friendly, Positive |
+| mk-MK-AleksandarNeural | Male | General | Friendly, Positive |
+| mk-MK-MarijaNeural | Female | General | Friendly, Positive |
+| ms-MY-OsmanNeural | Male | General | Friendly, Positive |
+| ms-MY-YasminNeural | Female | General | Friendly, Positive |
+| ml-IN-MidhunNeural | Male | General | Friendly, Positive |
+| ml-IN-SobhanaNeural | Female | General | Friendly, Positive |
+| mt-MT-GraceNeural | Female | General | Friendly, Positive |
+| mt-MT-JosephNeural | Male | General | Friendly, Positive |
+| mr-IN-AarohiNeural | Female | General | Friendly, Positive |
+| mr-IN-ManoharNeural | Male | General | Friendly, Positive |
+| mn-MN-BataaNeural | Male | General | Friendly, Positive |
+| mn-MN-YesuiNeural | Female | General | Friendly, Positive |
+| ne-NP-HemkalaNeural | Female | General | Friendly, Positive |
+| ne-NP-SagarNeural | Male | General | Friendly, Positive |
+| nb-NO-FinnNeural | Male | General | Friendly, Positive |
+| nb-NO-PernilleNeural | Female | General | Friendly, Positive |
+| ps-AF-GulNawazNeural | Male | General | Friendly, Positive |
+| ps-AF-LatifaNeural | Female | General | Friendly, Positive |
+| fa-IR-DilaraNeural | Female | General | Friendly, Positive |
+| fa-IR-FaridNeural | Male | General | Friendly, Positive |
+| pl-PL-MarekNeural | Male | General | Friendly, Positive |
+| pl-PL-ZofiaNeural | Female | General | Friendly, Positive |
+| pt-BR-ThalitaMultilingualNeural | Female | General | Friendly, Positive |
+| pt-BR-AntonioNeural | Male | General | Friendly, Positive |
+| pt-BR-FranciscaNeural | Female | General | Friendly, Positive |
+| pt-PT-DuarteNeural | Male | General | Friendly, Positive |
+| pt-PT-RaquelNeural | Female | General | Friendly, Positive |
+| ro-RO-AlinaNeural | Female | General | Friendly, Positive |
+| ro-RO-EmilNeural | Male | General | Friendly, Positive |
+| ru-RU-DmitryNeural | Male | General | Friendly, Positive |
+| ru-RU-SvetlanaNeural | Female | General | Friendly, Positive |
+| sr-RS-NicholasNeural | Male | General | Friendly, Positive |
+| sr-RS-SophieNeural | Female | General | Friendly, Positive |
+| si-LK-SameeraNeural | Male | General | Friendly, Positive |
+| si-LK-ThiliniNeural | Female | General | Friendly, Positive |
+| sk-SK-LukasNeural | Male | General | Friendly, Positive |
+| sk-SK-ViktoriaNeural | Female | General | Friendly, Positive |
+| sl-SI-PetraNeural | Female | General | Friendly, Positive |
+| sl-SI-RokNeural | Male | General | Friendly, Positive |
+| so-SO-MuuseNeural | Male | General | Friendly, Positive |
+| so-SO-UbaxNeural | Female | General | Friendly, Positive |
+| es-AR-ElenaNeural | Female | General | Friendly, Positive |
+| es-AR-TomasNeural | Male | General | Friendly, Positive |
+| es-BO-MarceloNeural | Male | General | Friendly, Positive |
+| es-BO-SofiaNeural | Female | General | Friendly, Positive |
+| es-CL-CatalinaNeural | Female | General | Friendly, Positive |
+| es-CL-LorenzoNeural | Male | General | Friendly, Positive |
+| es-CO-GonzaloNeural | Male | General | Friendly, Positive |
+| es-CO-SalomeNeural | Female | General | Friendly, Positive |
+| es-ES-XimenaNeural | Female | General | Friendly, Positive |
+| es-CR-JuanNeural | Male | General | Friendly, Positive |
+| es-CR-MariaNeural | Female | General | Friendly, Positive |
+| es-CU-BelkysNeural | Female | General | Friendly, Positive |
+| es-CU-ManuelNeural | Male | General | Friendly, Positive |
+| es-DO-EmilioNeural | Male | General | Friendly, Positive |
+| es-DO-RamonaNeural | Female | General | Friendly, Positive |
+| es-EC-AndreaNeural | Female | General | Friendly, Positive |
+| es-EC-LuisNeural | Male | General | Friendly, Positive |
+| es-SV-LorenaNeural | Female | General | Friendly, Positive |
+| es-SV-RodrigoNeural | Male | General | Friendly, Positive |
+| es-GQ-JavierNeural | Male | General | Friendly, Positive |
+| es-GQ-TeresaNeural | Female | General | Friendly, Positive |
+| es-GT-AndresNeural | Male | General | Friendly, Positive |
+| es-GT-MartaNeural | Female | General | Friendly, Positive |
+| es-HN-CarlosNeural | Male | General | Friendly, Positive |
+| es-HN-KarlaNeural | Female | General | Friendly, Positive |
+| es-MX-DaliaNeural | Female | General | Friendly, Positive |
+| es-MX-JorgeNeural | Male | General | Friendly, Positive |
+| es-NI-FedericoNeural | Male | General | Friendly, Positive |
+| es-NI-YolandaNeural | Female | General | Friendly, Positive |
+| es-PA-MargaritaNeural | Female | General | Friendly, Positive |
+| es-PA-RobertoNeural | Male | General | Friendly, Positive |
+| es-PY-MarioNeural | Male | General | Friendly, Positive |
+| es-PY-TaniaNeural | Female | General | Friendly, Positive |
+| es-PE-AlexNeural | Male | General | Friendly, Positive |
+| es-PE-CamilaNeural | Female | General | Friendly, Positive |
+| es-PR-KarinaNeural | Female | General | Friendly, Positive |
+| es-PR-VictorNeural | Male | General | Friendly, Positive |
+| es-ES-AlvaroNeural | Male | General | Friendly, Positive |
+| es-ES-ElviraNeural | Female | General | Friendly, Positive |
+| es-US-AlonsoNeural | Male | General | Friendly, Positive |
+| es-US-PalomaNeural | Female | General | Friendly, Positive |
+| es-UY-MateoNeural | Male | General | Friendly, Positive |
+| es-UY-ValentinaNeural | Female | General | Friendly, Positive |
+| es-VE-PaolaNeural | Female | General | Friendly, Positive |
+| es-VE-SebastianNeural | Male | General | Friendly, Positive |
+| su-ID-JajangNeural | Male | General | Friendly, Positive |
+| su-ID-TutiNeural | Female | General | Friendly, Positive |
+| sw-KE-RafikiNeural | Male | General | Friendly, Positive |
+| sw-KE-ZuriNeural | Female | General | Friendly, Positive |
+| sw-TZ-DaudiNeural | Male | General | Friendly, Positive |
+| sw-TZ-RehemaNeural | Female | General | Friendly, Positive |
+| sv-SE-MattiasNeural | Male | General | Friendly, Positive |
+| sv-SE-SofieNeural | Female | General | Friendly, Positive |
+| ta-IN-PallaviNeural | Female | General | Friendly, Positive |
+| ta-IN-ValluvarNeural | Male | General | Friendly, Positive |
+| ta-MY-KaniNeural | Female | General | Friendly, Positive |
+| ta-MY-SuryaNeural | Male | General | Friendly, Positive |
+| ta-SG-AnbuNeural | Male | General | Friendly, Positive |
+| ta-SG-VenbaNeural | Female | General | Friendly, Positive |
+| ta-LK-KumarNeural | Male | General | Friendly, Positive |
+| ta-LK-SaranyaNeural | Female | General | Friendly, Positive |
+| te-IN-MohanNeural | Male | General | Friendly, Positive |
+| te-IN-ShrutiNeural | Female | General | Friendly, Positive |
+| th-TH-NiwatNeural | Male | General | Friendly, Positive |
+| th-TH-PremwadeeNeural | Female | General | Friendly, Positive |
+| tr-TR-EmelNeural | Female | General | Friendly, Positive |
+| tr-TR-AhmetNeural | Male | General | Friendly, Positive |
+| uk-UA-OstapNeural | Male | General | Friendly, Positive |
+| uk-UA-PolinaNeural | Female | General | Friendly, Positive |
+| ur-IN-GulNeural | Female | General | Friendly, Positive |
+| ur-IN-SalmanNeural | Male | General | Friendly, Positive |
+| ur-PK-AsadNeural | Male | General | Friendly, Positive |
+| ur-PK-UzmaNeural | Female | General | Friendly, Positive |
+| uz-UZ-MadinaNeural | Female | General | Friendly, Positive |
+| uz-UZ-SardorNeural | Male | General | Friendly, Positive |
+| vi-VN-HoaiMyNeural | Female | General | Friendly, Positive |
+| vi-VN-NamMinhNeural | Male | General | Friendly, Positive |
+| cy-GB-AledNeural | Male | General | Friendly, Positive |
+| cy-GB-NiaNeural | Female | General | Friendly, Positive |
+| zu-ZA-ThandoNeural | Female | General | Friendly, Positive |
+| zu-ZA-ThembaNeural | Male | General | Friendly, Positive |
