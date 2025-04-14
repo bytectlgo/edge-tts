@@ -47,9 +47,8 @@ brews:
     homepage: "https://github.com/bytectlgo/edge-tts"
     description: "Edge TTS is a command-line tool based on Microsoft Edge's text-to-speech service"
     license: "MIT"
-    tap:
+    repository:
       owner: bytectlgo
       name: homebrew-tap
-    folder: Formula
     install: |
       bin.install "edge-tts"
