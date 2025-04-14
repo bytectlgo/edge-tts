@@ -2,7 +2,7 @@
 
 [中文](README_ZH.md) | English
 
-Edge TTS is a command-line tool based on Microsoft Edge's text-to-speech service, supporting multiple languages and voices.
+Edge TTS is a command-line tool based on Microsoft Edge's text-to-speech service, supporting multiple languages and voices. It can be used both as a command-line tool and as a Go library in your projects.
 
 ## Features
 
@@ -57,6 +57,34 @@ edge-tts -text "Hello, World!" -voice "zh-CN-XiaoxiaoNeural" -write-media hello.
 ```bash
 edge-tts -text "Hello, World!" -voice "zh-CN-XiaoxiaoNeural" -write-media hello.mp3 -write-subtitles hello.srt
 ```
+
+## Using as a Go Library
+
+You can also use this package as a Go library in your projects:
+
+```go
+package main
+
+import (
+    "github.com/bytectlgo/edge-tts"
+)
+
+func main() {
+    // Create a new TTS client
+    client := edge.NewTTS()
+
+    // Generate audio file
+    err := client.TextToSpeech("Hello, World!", "zh-CN-XiaoxiaoNeural", "output.mp3")
+    if err != nil {
+        panic(err)
+    }
+
+    // Generate audio file with subtitles
+    err = client.TextToSpeechWithSubtitles("Hello, World!", "zh-CN-XiaoxiaoNeural", "output.mp3", "output.srt")
+    if err != nil {
+        panic(err)
+    }
+}
 
 ## Supported Voices
 

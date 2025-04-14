@@ -2,7 +2,7 @@
 
 [English](README.md) | 中文
 
-Edge TTS 是一个基于 Microsoft Edge 文本转语音服务的命令行工具，支持多种语言和声音。
+Edge TTS 是一个基于 Microsoft Edge 文本转语音服务的命令行工具，支持多种语言和声音。它既可以作为命令行工具使用，也可以作为 Go 库在您的项目中使用。
 
 ## 功能特点
 
@@ -57,6 +57,34 @@ edge-tts -text "你好，世界！" -voice "zh-CN-XiaoxiaoNeural" -write-media h
 ```bash
 edge-tts -text "你好，世界！" -voice "zh-CN-XiaoxiaoNeural" -write-media hello.mp3 -write-subtitles hello.srt
 ```
+
+## 作为 Go 库使用
+
+您也可以在您的 Go 项目中将此包作为库使用：
+
+```go
+package main
+
+import (
+    "github.com/bytectlgo/edge-tts"
+)
+
+func main() {
+    // 创建新的 TTS 客户端
+    client := edge.NewTTS()
+
+    // 生成音频文件
+    err := client.TextToSpeech("你好，世界！", "zh-CN-XiaoxiaoNeural", "output.mp3")
+    if err != nil {
+        panic(err)
+    }
+
+    // 生成带字幕的音频文件
+    err = client.TextToSpeechWithSubtitles("你好，世界！", "zh-CN-XiaoxiaoNeural", "output.mp3", "output.srt")
+    if err != nil {
+        panic(err)
+    }
+}
 
 ## 支持的语音
 
