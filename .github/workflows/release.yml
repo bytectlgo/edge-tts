@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
   packages: write
+  pull-requests: write
+  issues: write
+  metadata: read
 
 jobs:
   goreleaser:
