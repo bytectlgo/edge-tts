@@ -46,15 +46,16 @@ type VoiceTag struct {
 	VoicePersonalities []string `json:"VoicePersonalities"`
 }
 
-// Voice 定义了一个语音
+// Voice 表示一个语音
 type Voice struct {
+	Name       string   `json:"Name"`
 	ShortName  string   `json:"ShortName"`
 	Gender     string   `json:"Gender"`
-	VoiceTag   VoiceTag `json:"VoiceTag"`
 	Locale     string   `json:"Locale"`
 	LocalName  string   `json:"LocalName"`
-	StyleList  []string `json:"StyleList"`
 	SampleRate int      `json:"SampleRate"`
+	StyleList  []string `json:"StyleList"`
+	VoiceTag   VoiceTag `json:"VoiceTag"`
 }
 
 // NewTTSConfig 创建一个新的 TTSConfig
