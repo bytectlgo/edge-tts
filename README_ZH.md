@@ -17,8 +17,22 @@ Edge TTS 是一个基于 Microsoft Edge 文本转语音服务的命令行工具�
 
 ## 安装
 
+### 使用 Go 安装
+
 ```bash
 go install github.com/bytectlgo/edge-tts@latest
+```
+
+### 使用 Homebrew 安装
+
+1. 添加 tap 源：
+```bash
+brew tap bytectlgo/homebrew-tap
+```
+
+2. 安装 edge-tts：
+```bash
+brew install edge-tts
 ```
 
 ## 使用方法

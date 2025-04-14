@@ -17,8 +17,22 @@ You can preview the voices at: [Edge TTS Text to Speech](https://huggingface.co/
 
 ## Installation
 
+### Using Go
+
 ```bash
 go install github.com/bytectlgo/edge-tts@latest
+```
+
+### Using Homebrew
+
+1. Add the tap source:
+```bash
+brew tap bytectlgo/homebrew-tap
+```
+
+2. Install edge-tts:
+```bash
+brew install edge-tts
 ```
 
 ## Usage
