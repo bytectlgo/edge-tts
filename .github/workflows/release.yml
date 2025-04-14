@@ -10,7 +10,6 @@ permissions:
   packages: write
   pull-requests: write
   issues: write
-  metadata: read
 
 jobs:
   goreleaser:
