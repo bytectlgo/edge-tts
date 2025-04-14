@@ -2,6 +2,7 @@ package edge_tts
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -12,12 +13,10 @@ type SubMaker struct {
 
 // SubCue 表示一个字幕片段
 type SubCue struct {
-	Index   int
-	Start   time.Duration
-	End     time.Duration
-	Text    string
-	Words   []string
-	WordNum int
+	Index int
+	Start time.Duration
+	End   time.Duration
+	Text  string
 }
 
 // NewSubMaker 创建一个新的 SubMaker
@@ -28,81 +27,71 @@ func NewSubMaker() *SubMaker {
 }
 
 // Feed 添加一个字幕片段
-func (s *SubMaker) Feed(chunk TTSChunk) {
+func (s *SubMaker) Feed(chunk TTSChunk) error {
 	if chunk.Type != "WordBoundary" {
-		return
+		return fmt.Errorf("invalid message type, expected 'WordBoundary'")
 	}
 
-	// 创建新的字幕片段
+	// 检查文本内容是否为空
+	if chunk.Text == "" {
+		return nil
+	}
+
+	// 创建新的字幕片段，注意时间单位转换为微秒
 	cue := SubCue{
-		Index:   len(s.cues) + 1,
-		Start:   time.Duration(chunk.Offset) * time.Microsecond,
-		End:     time.Duration(chunk.Offset+chunk.Duration) * time.Microsecond,
-		Text:    chunk.Text,
-		Words:   make([]string, 0),
-		WordNum: 0,
+		Index: len(s.cues) + 1, // SRT格式要求从1开始
+		Start: time.Duration(float64(chunk.Offset/10)) * time.Microsecond,
+		End:   time.Duration(float64((chunk.Offset+chunk.Duration)/10)) * time.Microsecond,
+		Text:  chunk.Text,
 	}
-
-	// 添加单词
-	cue.Words = append(cue.Words, chunk.Text)
-	cue.WordNum++
 
 	// 添加到字幕列表
 	s.cues = append(s.cues, cue)
+	return nil
 }
 
 // MergeCues 合并字幕片段
-func (s *SubMaker) MergeCues(wordsInCue int) {
-	if wordsInCue <= 0 {
-		return
+func (s *SubMaker) MergeCues(words int) error {
+	if words <= 0 {
+		return fmt.Errorf("invalid number of words to merge, expected > 0")
 	}
 
-	merged := make([]SubCue, 0)
-	current := SubCue{
-		Index:   1,
-		Start:   0,
-		End:     0,
-		Text:    "",
-		Words:   make([]string, 0),
-		WordNum: 0,
+	if len(s.cues) == 0 {
+		return nil
 	}
 
-	for _, cue := range s.cues {
-		if current.WordNum == 0 {
-			current.Start = cue.Start
-			current.End = cue.End
-			current.Text = cue.Text
-			current.Words = append(current.Words, cue.Text)
-			current.WordNum++
-		} else if current.WordNum < wordsInCue {
-			current.End = cue.End
-			current.Text += " " + cue.Text
-			current.Words = append(current.Words, cue.Text)
-			current.WordNum++
-		} else {
-			merged = append(merged, current)
-			current = SubCue{
-				Index:   len(merged) + 1,
-				Start:   cue.Start,
-				End:     cue.End,
-				Text:    cue.Text,
-				Words:   []string{cue.Text},
-				WordNum: 1,
+	newCues := make([]SubCue, 0)
+	currentCue := s.cues[0]
+
+	for _, cue := range s.cues[1:] {
+		// 计算当前字幕中的单词数
+		wordCount := len(strings.Fields(currentCue.Text))
+		if wordCount < words {
+			// 合并字幕
+			currentCue = SubCue{
+				Index: currentCue.Index,
+				Start: currentCue.Start,
+				End:   cue.End,
+				Text:  currentCue.Text + " " + cue.Text,
 			}
+		} else {
+			newCues = append(newCues, currentCue)
+			currentCue = cue
 		}
 	}
-
-	if current.WordNum > 0 {
-		merged = append(merged, current)
-	}
-
-	s.cues = merged
+	newCues = append(newCues, currentCue)
+	s.cues = newCues
+	return nil
 }
 
 // GetSRT 生成SRT格式的字幕
 func (s *SubMaker) GetSRT() string {
 	var result string
 	for _, cue := range s.cues {
+		// 跳过空文本的字幕
+		if cue.Text == "" {
+			continue
+		}
 		result += fmt.Sprintf("%d\n", cue.Index)
 		result += fmt.Sprintf("%s --> %s\n", formatDuration(cue.Start), formatDuration(cue.End))
 		result += cue.Text + "\n\n"

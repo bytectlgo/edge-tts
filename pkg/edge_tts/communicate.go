@@ -265,9 +265,11 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 							Metadata []struct {
 								Type string `json:"Type"`
 								Data struct {
-									Offset   int64  `json:"Offset"`
-									Duration int64  `json:"Duration"`
-									Text     string `json:"text.Text"`
+									Offset   int64 `json:"Offset"`
+									Duration int64 `json:"Duration"`
+									Text     struct {
+										Text string `json:"Text"`
+									} `json:"Text"`
 								} `json:"Data"`
 							} `json:"Metadata"`
 						}
@@ -280,11 +282,15 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 						// Process each metadata item
 						for _, meta := range metadata.Metadata {
 							if meta.Type == "WordBoundary" {
+								// 确保文本内容不为空
+								if meta.Data.Text.Text == "" {
+									continue
+								}
 								ch <- TTSChunk{
 									Type:     "WordBoundary",
 									Offset:   float64(meta.Data.Offset),
 									Duration: float64(meta.Data.Duration),
-									Text:     meta.Data.Text,
+									Text:     meta.Data.Text.Text,
 								}
 							}
 						}
@@ -337,7 +343,9 @@ func (c *Communicate) Save(ctx context.Context, audioPath string, subtitlePath s
 				return err
 			}
 		} else if chunk.Type == "WordBoundary" && subtitleFile != nil {
-			submaker.Feed(chunk)
+			if err := submaker.Feed(chunk); err != nil {
+				return fmt.Errorf("error feeding chunk: %v", err)
+			}
 		}
 	}
 
