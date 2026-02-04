@@ -1,6 +1,7 @@
 package edge_tts
 
 import (
+	"crypto/rand"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
@@ -83,4 +84,26 @@ func handleClientResponseError(resp *http.Response) error {
 
 	// 调整时钟偏差
 	return adjustClockSkew(date)
+}
+
+// generateMUID 生成随机 MUID (Microsoft User ID)
+func generateMUID() string {
+	b := make([]byte, 16)
+	rand.Read(b)
+	return strings.ToUpper(hex.EncodeToString(b))
+}
+
+// headersWithMUID 返回带 MUID Cookie 的 headers
+func headersWithMUID(headers http.Header) http.Header {
+	combined := headers.Clone()
+	combined.Set("Cookie", "muid="+generateMUID()+";")
+	return combined
+}
+
+// dateToString 返回 JavaScript 风格的日期字符串
+// 格式: "Wed Dec 04 2024 10:30:45 GMT+0000 (Coordinated Universal Time)"
+func dateToString() string {
+	now := time.Now().UTC()
+	// JavaScript 风格的日期格式
+	return now.Format("Mon Jan 02 2006 15:04:05") + " GMT+0000 (Coordinated Universal Time)"
 }

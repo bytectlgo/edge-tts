@@ -10,8 +10,8 @@ const (
 	WSSURL               = "wss://" + BaseURL + "/edge/v1?TrustedClientToken=" + TrustedClientToken
 	VoiceList            = "https://" + BaseURL + "/voices/list?trustedclienttoken=" + TrustedClientToken
 	DefaultVoice         = "en-US-EmmaMultilingualNeural"
-	ChromiumFullVersion  = "130.0.2849.68"
-	ChromiumMajorVersion = "130"
+	ChromiumFullVersion  = "143.0.3650.75"
+	ChromiumMajorVersion = "143"
 	SEC_MS_GEC_VERSION   = "1-" + ChromiumFullVersion
 )
 
@@ -20,7 +20,7 @@ var (
 		"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" +
 			" (KHTML, like Gecko) Chrome/" + ChromiumMajorVersion + ".0.0.0 Safari/537.36" +
 			" Edg/" + ChromiumMajorVersion + ".0.0.0",
-		"Accept-Encoding": "gzip, deflate, br",
+		"Accept-Encoding": "gzip, deflate, br, zstd",
 		"Accept-Language": "en-US,en;q=0.9",
 		"Sec-CH-UA": `" Not;A Brand";v="99", "Microsoft Edge";v="` + ChromiumMajorVersion + `",` +
 			` "Chromium";v="` + ChromiumMajorVersion + `"`,

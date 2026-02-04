@@ -115,15 +115,18 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 		connID := uuid.New().String()
 		secMsGec := generateSecMsGec()
 
-		// Build complete WebSocket URL
-		wsURL := fmt.Sprintf("%s&Sec-MS-GEC=%s&Sec-MS-GEC-Version=%s&ConnectionId=%s",
-			c.wsURL, secMsGec, SEC_MS_GEC_VERSION, connID)
+		// Build complete WebSocket URL (参数顺序与 Python 一致)
+		wsURL := fmt.Sprintf("%s&ConnectionId=%s&Sec-MS-GEC=%s&Sec-MS-GEC-Version=%s",
+			c.wsURL, connID, secMsGec, SEC_MS_GEC_VERSION)
 
 		// Prepare request headers
 		headers := http.Header{}
 		for k, v := range WSSHeaders {
 			headers.Set(k, v)
 		}
+
+		// 添加 MUID Cookie (关键修复!)
+		headers = headersWithMUID(headers)
 
 		// Establish WebSocket connection
 		conn, _, err := dialer.Dial(wsURL, headers)
@@ -132,19 +135,19 @@ func (c *Communicate) Stream(ctx context.Context) (<-chan TTSChunk, error) {
 			return
 		}
 
-		// Send command request
+		// Send command request (使用 JavaScript 风格的时间戳)
 		cmdReq := fmt.Sprintf("X-Timestamp:%s\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n{\"context\":{\"synthesis\":{\"audio\":{\"metadataoptions\":{\"sentenceBoundaryEnabled\":\"false\",\"wordBoundaryEnabled\":\"true\"},\"outputFormat\":\"audio-24khz-48kbitrate-mono-mp3\"}}}}\r\n",
-			time.Now().UTC().Format(time.RFC1123))
+			dateToString())
 
 		if err := conn.WriteMessage(websocket.TextMessage, []byte(cmdReq)); err != nil {
 			ch <- TTSChunk{Type: "error", Data: []byte(err.Error())}
 			return
 		}
 
-		// Send SSML request
-		ssmlReq := fmt.Sprintf("X-RequestId:%s\r\nContent-Type:application/ssml+xml\r\nX-Timestamp:%s\r\nPath:ssml\r\n\r\n%s",
+		// Send SSML request (时间戳格式需要加 Z 后缀)
+		ssmlReq := fmt.Sprintf("X-RequestId:%s\r\nContent-Type:application/ssml+xml\r\nX-Timestamp:%sZ\r\nPath:ssml\r\n\r\n%s",
 			uuid.New().String(),
-			time.Now().UTC().Format(time.RFC3339),
+			dateToString(),
 			c.createSSML())
 
 		if err := conn.WriteMessage(websocket.TextMessage, []byte(ssmlReq)); err != nil {
